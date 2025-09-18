@@ -1,0 +1,23 @@
+{
+    "name": "EngineLooper.VContainer",
+    "rootNamespace": "",
+    "references": [
+        "VContainer",
+        "EngineLooper.Annotations"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "jp.hadashikick.vcontainer",
+            "expression": "",
+            "define": "VCONTAINER"
+        }
+    ],
+    "noEngineReferences": false
+}

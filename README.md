@@ -1,1 +1,1 @@
-# KinemagicStudio-CE
+# Kinemagic Studio - Community Edition

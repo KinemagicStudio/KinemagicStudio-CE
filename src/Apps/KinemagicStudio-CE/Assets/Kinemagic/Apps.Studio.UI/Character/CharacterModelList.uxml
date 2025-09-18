@@ -1,0 +1,16 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="CharacterModelList.uss?fileID=7433441132597879392&amp;guid=2bb4d7da8aad8431895c91815a439c3e&amp;type=3#CharacterModelList" />
+    <engine:VisualElement name="character-model-list-root-container" class="character-model-list-root-container" style="right: 75%; position: absolute; top: 50px; left: 0; bottom: 50px;">
+        <engine:VisualElement name="character-model-list-panel" class="character-model-list-panel" style="width: 100%; min-width: auto; height: 100%; display: flex;">
+            <engine:Label name="character-model-list-header" text="Character Models" class="character-model-list-header" />
+            <engine:VisualElement name="character-model-list-toolbar" class="toolbar">
+                <engine:Button name="refresh-button" text="Refresh" class="toolbar-button" />
+                <engine:Button name="open-folder-button" text="Open Folder" class="toolbar-button" />
+            </engine:VisualElement>
+            <engine:ScrollView name="character-model-list-scroll" class="character-model-list-scroll">
+                <engine:VisualElement name="character-model-list-container" class="character-model-list-container" />
+            </engine:ScrollView>
+        </engine:VisualElement>
+        <engine:VisualElement name="panel-divider" class="panel-divider" />
+    </engine:VisualElement>
+</engine:UXML>

@@ -1,0 +1,19 @@
+{
+    "name": "CinematicSequencer.UI",
+    "rootNamespace": "",
+    "references": [
+        "Unity.AppUI",
+        "UniTask",
+        "CinematicSequencer",
+        "ContextualMenuPlayer"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

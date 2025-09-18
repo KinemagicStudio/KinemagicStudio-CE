@@ -1,0 +1,43 @@
+{
+    "name": "Kinemagic.Apps.Studio.FeatureCore.MotionDataSource.Infrastructure",
+    "rootNamespace": "",
+    "references": [
+        "Kinemagic.Apps.Studio.FeatureCore.MotionDataSource",
+        "Kinemagic.Apps.Studio.Contracts",
+        "Kinemagic.AppCore.Utils",
+        "UniTask",
+        "uOSC.Runtime",
+        "FacialCaptureSync",
+        "com.sony.mocopi.receiver"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.hecomi.uosc",
+            "expression": "",
+            "define": "UOSC"
+        },
+        {
+            "name": "jp.sotanmochi.facialcapturesync",
+            "expression": "",
+            "define": "FACIAL_CAPTURE_SYNC"
+        },
+        {
+            "name": "com.sony.mocopi.receiver",
+            "expression": "",
+            "define": "MOCOPI_RECEIVER_PLUGIN"
+        },
+        {
+            "name": "jp.sotanmochi.signalstreaming",
+            "expression": "",
+            "define": "SIGNAL_STREAMING"
+        }
+    ],
+    "noEngineReferences": false
+}

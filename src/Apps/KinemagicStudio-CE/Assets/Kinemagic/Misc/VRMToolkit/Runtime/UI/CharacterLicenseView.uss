@@ -1,0 +1,163 @@
+.dialog-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.dialog-window {
+    background-color: rgb(60, 60, 60);
+    border-radius: 10px;
+    width: 1280px;
+    height: 720px;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.dialog-title {
+    font-size: 24px;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    -unity-text-align: middle-center;
+}
+
+.dialog-header {
+    margin-bottom: 10px;
+}
+
+.dialog-header-text {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    white-space: normal;
+}
+
+.dialog-content {
+    flex-grow: 1;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.license-info-scroll {
+    flex-grow: 1;
+}
+
+.license-info-container {
+    flex-direction: column;
+    padding: 10px;
+}
+
+.thumbnail-container {
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    height: 200px;
+    background-color: rgb(40, 40, 40);
+    border-radius: 5px;
+}
+
+.thumbnail-image {
+    max-width: 100%;
+    max-height: 100%;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.license-section {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: rgb(50, 50, 50);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.section-title {
+    font-size: 18px;
+    -unity-font-style: bold;
+    margin-bottom: 10px;
+    color: rgb(200, 200, 200);
+}
+
+.license-info-row {
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.license-info-label {
+    min-width: 150px;
+    -unity-font-style: bold;
+    color: rgb(180, 180, 180);
+}
+
+.license-info-value {
+    flex-shrink: 1;
+    flex-grow: 1;
+    color: rgb(255, 255, 255);
+    white-space: normal;
+}
+
+.open-url-button {
+    padding: 4px 8px;
+    background-color: rgb(80, 80, 80);
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: rgb(120, 120, 120);
+    margin-top: 4px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    align-self: center;
+}
+
+.agreement-section {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: rgb(70, 70, 70);
+    border-radius: 5px;
+}
+
+.agreement-toggle {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+
+.dialog-actions {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.language-button {
+    margin-right: auto;
+    padding: 8px 16px;
+    background-color: rgb(80, 80, 80);
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgb(120, 120, 120);
+    color: rgb(255, 255, 255);
+}
+
+.accept-button {
+    padding: 8px 16px;
+    background-color: rgb(76, 175, 80);
+    border-radius: 5px;
+    margin-left: 10px;
+    border-width: 0;
+}
+
+.accept-button:disabled {
+    background-color: rgb(76, 175, 80, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.decline-button {
+    padding: 8px 16px;
+    background-color: rgb(244, 67, 54);
+    border-radius: 5px;
+    margin-left: 10px;
+    border-width: 0;
+}

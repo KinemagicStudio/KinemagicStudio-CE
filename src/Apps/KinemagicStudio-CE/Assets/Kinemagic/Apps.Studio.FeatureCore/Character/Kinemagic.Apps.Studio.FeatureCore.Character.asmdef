@@ -1,0 +1,23 @@
+{
+    "name": "Kinemagic.Apps.Studio.FeatureCore.Character",
+    "rootNamespace": "",
+    "references": [
+        "Kinemagic.Apps.Studio.Contracts",
+        "EngineLooper.Annotations",
+        "UniTask",
+        "UniGLTF",
+        "VRM10",
+        "VRM10.Extensions.Materials.lilToon",
+        "MessagePipe",
+        "Kinemagic.AppCore.Utils"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

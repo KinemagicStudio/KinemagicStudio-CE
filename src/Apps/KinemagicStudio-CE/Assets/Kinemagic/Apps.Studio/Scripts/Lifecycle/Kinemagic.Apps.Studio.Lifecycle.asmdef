@@ -1,0 +1,49 @@
+{
+    "name": "Kinemagic.Apps.Studio.Lifecycle",
+    "rootNamespace": "",
+    "references": [
+        "VContainer",
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "EngineLooper.VContainer",
+        "Kinemagic.AppCore.Utils",
+        "Kinemagic.Apps.Studio",
+        "Kinemagic.Apps.Studio.Contracts",
+        "Kinemagic.Apps.Studio.FeatureCore.CameraSystem",
+        "Kinemagic.Apps.Studio.FeatureCore.Character",
+        "Kinemagic.Apps.Studio.FeatureCore.Character.BinaryDataStorage",
+        "Kinemagic.Apps.Studio.FeatureCore.MotionDataSource",
+        "Kinemagic.Apps.Studio.FeatureCore.MotionDataSource.Infrastructure",
+        "Kinemagic.Apps.Studio.FeatureCore.VideoStreaming",
+        "Kinemagic.Apps.Studio.UI",
+        "Kinemagic.Apps.Studio.UI.Character",
+        "VRMToolkit",
+        "Kinemagic.Apps.Studio.FeatureCore.SpatialEnvironment",
+        "Kinemagic.Apps.Studio.FeatureCore.SpatialEnvironment.Infrastructure",
+        "Kinemagic.Apps.Studio.UI.CinematicSequencer",
+        "CinematicSequencer.UI",
+        "CinematicSequencer",
+        "Kinemagic.Apps.Studio.FeatureCore.CinematicSequencer",
+        "Kinemagic.Apps.Studio.UI.Help"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "jp.sotanmochi.facialcapturesync",
+            "expression": "",
+            "define": "FACIAL_CAPTURE_SYNC"
+        },
+        {
+            "name": "com.sony.mocopi.receiver",
+            "expression": "",
+            "define": "MOCOPI_RECEIVER_PLUGIN"
+        }
+    ],
+    "noEngineReferences": false
+}

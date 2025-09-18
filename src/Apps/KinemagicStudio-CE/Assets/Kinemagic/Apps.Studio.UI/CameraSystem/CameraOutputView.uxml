@@ -1,0 +1,28 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="view-container" style="flex-grow: 1; position: absolute; top: 50px; bottom: 50px; left: 0; right: 0; align-items: center; justify-content: center; align-content: center;">
+        <engine:Image name="camera-output-image" style="flex-grow: 0; height: 972px; width: 1728px; justify-content: center; align-self: center; align-content: center; align-items: center; position: absolute;">
+            <engine:Image name="main-camera-output-image" style="flex-grow: 0; height: 50%; width: 50%; justify-content: flex-start; align-self: flex-start; align-content: flex-start; align-items: flex-start; position: absolute; top: 0; left: 0;" />
+            <engine:VisualElement name="camera-switcher-labels" style="flex-grow: 0; position: absolute; top: 0; left: 0; right: 0; bottom: 0;">
+                <engine:Label text="MAIN" name="main" style="font-size: 40px; color: rgb(255, 255, 255); -unity-font-style: bold; flex-shrink: 1; top: 25px; left: 30px; width: 150px; display: flex; position: absolute;" />
+                <engine:VisualElement name="camera-labels-2" style="flex-grow: 1; position: absolute; top: 0; left: 0; bottom: 0; right: 0; display: none;">
+                    <engine:Label text="CAM-1" name="cam-1" style="font-size: 32px; color: rgb(255, 255, 255); -unity-font-style: bold; flex-shrink: 1; top: 495px; left: 20px; width: 150px; display: flex; position: absolute;" />
+                    <engine:Label text="CAM-2" name="cam-2" style="font-size: 32px; color: rgb(255, 255, 255); -unity-font-style: bold; flex-shrink: 1; top: 495px; left: 884px; width: 150px; display: flex; position: absolute;" />
+                </engine:VisualElement>
+                <engine:VisualElement name="camera-labels-8" style="flex-grow: 1; position: absolute; top: 0; left: 0; bottom: 0; right: 0; display: flex;">
+                    <engine:Label text="CAM-1" name="cam-1" style="font-size: 32px; color: rgb(255, 255, 255); -unity-font-style: bold; flex-shrink: 1; top: 495px; left: 20px; width: 150px; display: flex; position: absolute;" />
+                    <engine:Label text="CAM-2" name="cam-2" style="font-size: 32px; color: rgb(255, 255, 255); -unity-font-style: bold; flex-shrink: 1; top: 495px; left: 452px; width: 150px; display: flex; position: absolute;" />
+                    <engine:Label text="CAM-3" name="cam-3" style="font-size: 32px; color: rgb(255, 255, 255); -unity-font-style: bold; flex-shrink: 1; top: 495px; left: 884px; width: 150px; display: flex; position: absolute;" />
+                    <engine:Label text="CAM-4" name="cam-4" style="font-size: 32px; color: rgb(255, 255, 255); -unity-font-style: bold; flex-shrink: 1; top: 495px; left: 1316px; width: 150px; display: flex; position: absolute;" />
+                    <engine:Label text="CAM-5" name="cam-5" style="font-size: 32px; color: rgb(255, 255, 255); -unity-font-style: bold; flex-shrink: 1; top: 740px; left: 20px; width: 150px; display: flex; position: absolute;" />
+                    <engine:Label text="CAM-6" name="cam-6" style="font-size: 32px; color: rgb(255, 255, 255); -unity-font-style: bold; flex-shrink: 1; top: 740px; left: 452px; width: 150px; display: flex; position: absolute;" />
+                    <engine:Label text="CAM-7" name="cam-7" style="font-size: 32px; color: rgb(255, 255, 255); -unity-font-style: bold; flex-shrink: 1; top: 740px; left: 884px; width: 150px; display: flex; position: absolute;" />
+                    <engine:Label text="CAM-8" name="cam-8" style="font-size: 32px; color: rgb(255, 255, 255); -unity-font-style: bold; flex-shrink: 1; top: 740px; left: 1316px; width: 150px; display: flex; position: absolute;" />
+                </engine:VisualElement>
+            </engine:VisualElement>
+            <engine:VisualElement name="camera-output-control" style="flex-grow: 0; position: absolute; top: 0; left: 50%; width: 50%; height: 50%; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+                <engine:Toggle label="Vertical Mode" name="vertical-mode-toggle" style="color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 18px;" />
+                <engine:DropdownField label="Num of camera" name="num-of-camera-dropdown" choices="2,4,8" index="2" style="-unity-font-style: bold; color: rgb(255, 255, 255); font-size: 18px; width: 250px;" />
+            </engine:VisualElement>
+        </engine:Image>
+    </engine:VisualElement>
+</engine:UXML>

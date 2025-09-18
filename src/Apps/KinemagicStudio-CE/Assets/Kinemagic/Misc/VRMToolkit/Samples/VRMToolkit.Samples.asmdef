@@ -1,0 +1,19 @@
+{
+    "name": "VRMToolkit.Samples",
+    "rootNamespace": "",
+    "references": [
+        "VRMToolkit",
+        "UniGLTF",
+        "VRM10",
+        "UniTask"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

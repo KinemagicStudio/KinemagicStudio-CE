@@ -1,0 +1,175 @@
+.unity-label {
+    color: rgb(255, 255, 255);
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.unity-base-field__label {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    min-width: 50px;
+}
+
+.camera-control-container {
+    background-color: rgb(40, 40, 40);
+    border-color: rgb(60, 60, 60);
+    border-width: 1px;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px;
+    flex-direction: column;
+}
+
+.section-title {
+    font-size: 16px;
+    color: rgb(220, 220, 220);
+    margin-bottom: 12px;
+    -unity-font-style: bold;
+}
+
+.parameter-group {
+    margin-bottom: 16px;
+    flex-direction: column;
+}
+
+.parameter-label {
+    font-size: 12px;
+    color: rgb(180, 180, 180);
+    margin-bottom: 4px;
+}
+
+.slider-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.parameter-slider {
+    flex-grow: 1;
+    margin-right: 12px;
+}
+
+.parameter-slider .unity-slider__tracker {
+    background-color: rgb(60, 60, 60);
+    border-radius: 2px;
+    height: 4px;
+}
+
+.parameter-slider .unity-slider__dragger {
+    background-color: rgb(100, 150, 255);
+    border-color: rgb(120, 170, 255);
+    border-radius: 6px;
+    width: 12px;
+    height: 12px;
+}
+
+.parameter-slider .unity-slider__dragger:hover {
+    background-color: rgb(120, 170, 255);
+}
+
+.parameter-value {
+    font-size: 12px;
+    color: rgb(220, 220, 220);
+    min-width: 60px;
+    -unity-text-align: middle-right;
+}
+
+.unity-base-popup-field__input {
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    min-width: 70px;
+    min-height: 35px;
+    background-color: rgba(192, 192, 192, 0);
+    border-color: rgba(160, 160, 160, 0);
+}
+
+.unity-base-popup-field__text {
+    color: rgb(255, 255, 255);
+    margin-right: 4px;
+    -unity-text-align: middle-center;
+}
+
+.unity-base-popup-field__arrow {
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+
+/* Post-processing effects */
+.effect-selector-group {
+    margin-bottom: 16px;
+    flex-direction: column;
+}
+
+.effect-dropdown {
+    color: rgb(220, 220, 220);
+    font-size: 12px;
+    background-color: rgb(60, 60, 60);
+    border-color: rgb(80, 80, 80);
+    border-radius: 4px;
+    min-width: 150px;
+}
+
+.effect-dropdown .unity-label {
+    color: rgb(220, 220, 220);
+    font-size: 12px;
+}
+
+.effect-parameters-container {
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+.effect-container {
+    background-color: rgb(50, 50, 50);
+    border-color: rgb(70, 70, 70);
+    border-width: 1px;
+    border-radius: 6px;
+    padding: 12px;
+    margin: 4px 0;
+    flex-direction: column;
+    display: none;
+}
+
+.effect-title {
+    font-size: 14px;
+    color: rgb(220, 220, 220);
+    margin-bottom: 8px;
+    -unity-font-style: bold;
+}
+
+.effect-toggle {
+    margin: 4px 0 8px 0;
+    color: rgb(220, 220, 220);
+}
+
+.parameter-row {
+    flex-direction: row;
+    align-items: center;
+    margin: 4px 0;
+    justify-content: space-between;
+}
+
+.parameter-row .parameter-label {
+    flex-shrink: 0;
+    min-width: 100px;
+    margin-right: 8px;
+}
+
+.parameter-dropdown {
+    flex-grow: 1;
+    min-width: 100px;
+    color: rgb(220, 220, 220);
+    background-color: rgb(60, 60, 60);
+    border-color: rgb(80, 80, 80);
+    border-radius: 4px;
+}
+
+.parameter-dropdown .unity-label {
+    color: rgb(220, 220, 220);
+}

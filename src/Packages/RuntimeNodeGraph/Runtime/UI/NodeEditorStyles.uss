@@ -1,0 +1,77 @@
+.node {
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #3f3f3f;
+    padding: 10px;
+    min-width: 150px;
+    position: absolute;
+}
+
+.node-header {
+    background-color: #2a2a2a;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.node-title {
+    color: white;
+    font-size: 14px;
+    -unity-font-style: bold;
+}
+
+.node-content {
+    margin-top: 5px;
+}
+
+.port {
+    height: 20px;
+    margin: 5px 0;
+    flex-direction: row;
+    align-items: center;
+}
+
+.port-label {
+    color: #c4c4c4;
+    font-size: 12px;
+}
+
+.port-input {
+    background-color: #4287f5;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    margin-right: 5px;
+}
+
+.port-output {
+    background-color: #f54242;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    margin-left: 5px;
+}
+
+.port-input:hover,
+.port-output:hover {
+    border-width: 2px;
+    border-color: white;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+}
+
+.port-highlight {
+    border-width: 2px;
+    border-color: #00ff00;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #00ff00;
+}
+
+.connection {
+    position: absolute;
+    stroke: white;
+    stroke-width: 2px;
+}

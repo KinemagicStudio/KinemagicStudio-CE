@@ -1,0 +1,14 @@
+<UXML xmlns="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="TimelineEditor.uss?fileID=7433441132597879392&amp;guid=70db82e3ba626436fbf342852dee8623&amp;type=3#TimelineEditor" />
+    <VisualElement name="dialog-container" class="dialog-container">
+        <VisualElement name="dialog-window" class="dialog-window">
+            <Label name="dialog-title" text="Unsaved Changes" class="dialog-title" />
+            <Label name="dialog-message" text="There are unsaved changes in the current timeline. Do you want to save before opening a new timeline?" class="dialog-message" />
+            <VisualElement name="dialog-buttons" class="dialog-buttons">
+                <Button name="save-button" text="Save" class="dialog-button" />
+                <Button name="dont-save-button" text="Don't Save" class="dialog-button" />
+                <Button name="cancel-button" text="Cancel" class="dialog-button" />
+            </VisualElement>
+        </VisualElement>
+    </VisualElement>
+</UXML>

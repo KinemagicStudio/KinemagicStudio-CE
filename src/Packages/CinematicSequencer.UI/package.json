@@ -1,0 +1,10 @@
+{
+    "name": "jp.sotanmochi.cinematicsequencer.ui",
+    "version": "0.2.0",
+    "displayName": "CinematicSequencer.UI",
+    "license": "MIT",
+    "dependencies": {
+        "com.cysharp.unitask": "2.5.10",
+        "studio.shortsleeve.contextualmenuplayer": "0.1.0"
+    }
+}

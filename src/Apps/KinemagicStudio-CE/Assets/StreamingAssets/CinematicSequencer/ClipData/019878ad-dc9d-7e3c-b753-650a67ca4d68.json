@@ -1,0 +1,300 @@
+{
+  "CinematicSequencerFormatVersion": "0.1.0",
+  "Id": "019878ad-dc9d-7e3c-b753-650a67ca4d68",
+  "Name": "CameraPose_Sample_01",
+  "Type": "CameraPose",
+  "PositionX": {
+    "Keys": [
+      {
+        "Time": 0.0,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 2.186,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 3.417,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 5.885,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 59.9890022,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 60.0000038,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      }
+    ],
+    "Length": 6,
+    "PreWrapMode": "ClampForever",
+    "PostWrapMode": "ClampForever"
+  },
+  "PositionY": {
+    "Keys": [
+      {
+        "Time": 0.0,
+        "Value": 0.0,
+        "InTangent": 0.457456529,
+        "OutTangent": 0.457456529,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 2.186,
+        "Value": 1.0,
+        "InTangent": 0.292654365,
+        "OutTangent": 0.292654365,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 3.417,
+        "Value": 1.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 5.885,
+        "Value": 1.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 59.9890022,
+        "Value": 1.0,
+        "InTangent": -0.0184791628,
+        "OutTangent": -0.0184791628,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 60.0000038,
+        "Value": 0.0,
+        "InTangent": -90.89598,
+        "OutTangent": -90.89598,
+        "TangentMode": "Free"
+      }
+    ],
+    "Length": 6,
+    "PreWrapMode": "ClampForever",
+    "PostWrapMode": "ClampForever"
+  },
+  "PositionZ": {
+    "Keys": [
+      {
+        "Time": 0.0,
+        "Value": 0.0,
+        "InTangent": -2.28728271,
+        "OutTangent": -2.28728271,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 2.186,
+        "Value": -5.0,
+        "InTangent": -5.85308743,
+        "OutTangent": -5.85308743,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 3.417,
+        "Value": -20.0,
+        "InTangent": -39.1997833,
+        "OutTangent": -39.1997833,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 5.885,
+        "Value": -150.0,
+        "InTangent": -2.29795647,
+        "OutTangent": -2.29795647,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 59.9890022,
+        "Value": -150.0,
+        "InTangent": 2.77187443,
+        "OutTangent": 2.77187443,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 60.0000038,
+        "Value": 0.0,
+        "InTangent": 13634.3965,
+        "OutTangent": 13634.3965,
+        "TangentMode": "Free"
+      }
+    ],
+    "Length": 6,
+    "PreWrapMode": "ClampForever",
+    "PostWrapMode": "ClampForever"
+  },
+  "EulerAngleX": {
+    "Keys": [
+      {
+        "Time": 0.0,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 2.186,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 3.417,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 5.885,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 59.9890022,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 60.0000038,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      }
+    ],
+    "Length": 6,
+    "PreWrapMode": "ClampForever",
+    "PostWrapMode": "ClampForever"
+  },
+  "EulerAngleY": {
+    "Keys": [
+      {
+        "Time": 0.0,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 2.186,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 3.417,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 5.885,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 59.9890022,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 60.0000038,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      }
+    ],
+    "Length": 6,
+    "PreWrapMode": "ClampForever",
+    "PostWrapMode": "ClampForever"
+  },
+  "EulerAngleZ": {
+    "Keys": [
+      {
+        "Time": 0.0,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 2.186,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 3.417,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 5.885,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 59.9890022,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      },
+      {
+        "Time": 60.0000038,
+        "Value": 0.0,
+        "InTangent": 0.0,
+        "OutTangent": 0.0,
+        "TangentMode": "Free"
+      }
+    ],
+    "Length": 6,
+    "PreWrapMode": "ClampForever",
+    "PostWrapMode": "ClampForever"
+  }
+}

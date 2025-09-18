@@ -1,0 +1,19 @@
+{
+    "name": "Kinemagic.Apps.Studio.UI.CinematicSequencer",
+    "rootNamespace": "",
+    "references": [
+        "Kinemagic.Apps.Studio.UI",
+        "CinematicSequencer",
+        "CinematicSequencer.UI",
+        "EngineLooper.Annotations"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

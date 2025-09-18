@@ -1,0 +1,28 @@
+<UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="UnityEngine.UIElements" schemaLocation="UnityEngine.UIElements ../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Packages/jp.sotanmochi.runtimenodegraph/Runtime/UI/NodeEditorStyles.uss?fileID=7433441132597879392&amp;guid=3ce687b9cc4c54657814568739bb1bb5&amp;type=3#NodeEditorStyles" />
+    <Style src="project://database/Assets/Kinemagic.Apps.Studio.UI/MotionCapture/MotionCapture.uss?fileID=7433441132597879392&amp;guid=c4ffdc3d4286f4b0ca72ea067bc8fdfc&amp;type=3#MotionCapture" />
+    <VisualElement name="root" style="flex-grow: 1; background-color: rgb(45, 45, 45); top: 50px; bottom: 50px; position: absolute; left: 0; right: 0;">
+        <VisualElement name="content-container" style="flex-grow: 1; flex-direction: row;">
+            <VisualElement name="side-panel" style="width: 300px; background-color: rgb(56, 56, 56); padding: 10px;">
+                <VisualElement name="data-source-form">
+                    <Label text="Data Source Type" style="margin-top: 5px;" />
+                    <DropdownField name="data-source-type-dropdown" style="margin-bottom: 10px;" />
+                    <VisualElement name="server-address-container">
+                        <Label text="Server Address" style="margin-top: 5px;" />
+                        <TextField name="server-address-field" value="127.0.0.1" style="margin-bottom: 10px;" />
+                    </VisualElement>
+                    <VisualElement name="port-container">
+                        <Label text="Port" style="margin-top: 5px;" />
+                        <IntegerField name="port-field" value="39539" style="margin-bottom: 10px;" />
+                    </VisualElement>
+                    <VisualElement name="streaming-data-id-container">
+                        <Label text="Streaming Data ID" style="margin-top: 5px;" />
+                        <IntegerField name="streaming-data-id-field" value="0" style="margin-bottom: 10px;" />
+                    </VisualElement>
+                    <Button name="add-data-source-button" text="Add Data Source" style="margin-top: 20px; height: 30px;" />
+                </VisualElement>
+            </VisualElement>
+            <VisualElement name="graph-container" style="flex-grow: 1; position: relative;" />
+        </VisualElement>
+    </VisualElement>
+</UXML>

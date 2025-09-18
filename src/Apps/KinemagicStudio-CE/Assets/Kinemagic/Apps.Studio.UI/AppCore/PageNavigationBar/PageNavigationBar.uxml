@@ -1,0 +1,34 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="PageNavigationBar.uss?fileID=7433441132597879392&amp;guid=be2fb81e8bc684f4285fc85e3bf93e96&amp;type=3#NavigationBar" />
+    <engine:VisualElement name="navigation-bar" class="navbar">
+        <engine:VisualElement name="navbar-spacer" class="navbar-spacer" />
+        <engine:Button name="spatial-environment" tooltip="Spatial Environment" class="nav-button">
+            <engine:Label text="Environment" name="Label" class="nav-label" />
+        </engine:Button>
+        <engine:Button name="character" tooltip="Character" class="nav-button">
+            <engine:Label text="Character" class="nav-label" />
+        </engine:Button>
+        <engine:Button name="motion-capture" tooltip="Motion Capture" class="nav-button">
+            <engine:Label text="Motion Capture" class="nav-label" />
+        </engine:Button>
+        <engine:Button name="camera-control" tooltip="Camera Control" class="nav-button">
+            <engine:Label text="Camera Control" class="nav-label" />
+        </engine:Button>
+        <engine:Button name="camera-switcher" tooltip="Camera Switcher" class="nav-button">
+            <engine:Label text="Camera Switcher" class="nav-label" />
+        </engine:Button>
+        <engine:Button name="cinematic-sequencer" tooltip="Cinematic Sequencer" class="nav-button">
+            <engine:Label text="Cinematic Sequencer" class="nav-label" />
+        </engine:Button>
+        <engine:Button name="main-camera" tooltip="Output" class="nav-button">
+            <engine:Label text="Output" class="nav-label" />
+        </engine:Button>
+        <!-- <engine:Button name="online-service" tooltip="Online Service" class="nav-button">
+            <engine:Label text="Online Service" name="Label" class="nav-label" />
+        </engine:Button> -->
+        <engine:VisualElement name="navbar-spacer" class="navbar-spacer" />
+        <engine:Button name="help" tooltip="Help" class="nav-button">
+            <engine:Label text="Help" class="nav-label" />
+        </engine:Button>
+    </engine:VisualElement>
+</engine:UXML>

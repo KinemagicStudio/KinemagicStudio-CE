@@ -1,0 +1,217 @@
+.keyframe-editor-container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: rgb(45, 45, 45);
+}
+
+.section-header {
+    font-size: 14px;
+    -unity-font-style: bold;
+    color: #E0E0E0;
+    margin-bottom: 10px;
+}
+
+.panel-content {
+    flex-grow: 1;
+    padding: 8px;
+}
+
+.header-area {
+    height: 40px;
+    background-color: rgb(56, 56, 56);
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(34, 34, 34);
+}
+
+.middle-area {
+    height: 40px;
+    background-color: rgb(56, 56, 56);
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(34, 34, 34);
+}
+
+.toolbar {
+    flex-direction: row;
+    height: 100%;
+    padding: 0 8px;
+    align-items: center;
+}
+
+.toolbar-button {
+    margin: 0 2px;
+    padding: 4px 8px;
+    background-color: rgb(74, 74, 74);
+    border-width: 1px;
+    border-color: rgb(85, 85, 85);
+    border-radius: 3px;
+    color: rgb(224, 224, 224);
+}
+
+.toolbar IntegerField {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 60px;
+}
+
+.toolbar Label {
+    margin-left: 5px;
+    margin-right: 5px;
+    -unity-text-align: middle-left;
+}
+
+.dope-sheet-area {
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+/********** Left panel **********/
+.track-headers-title {
+    height: 30px;
+    background-color: rgb(58, 58, 58);
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(34, 34, 34);
+}
+
+.track-headers-scroll-view {
+    flex-grow: 1;
+}
+
+.track-header {
+    height: 40px;
+    width: 100%;
+    padding: 0 8px;
+    background-color: rgb(68, 68, 68);
+    border-right-width: 1px;
+    border-right-color: rgb(34, 34, 34);
+    justify-content: center;
+    margin: 2px 0;
+}
+
+/********** Right panel **********/
+.right-panel {
+    flex-grow: 1;
+    flex-direction: column;
+    background-color: rgb(45, 45, 45);
+}
+
+.time-ruler {
+    height: 30px;
+    background-color: rgb(58, 58, 58);
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(34, 34, 34);
+}
+
+.time-ruler-scroll-view {
+    margin: 0 30px 0 0;
+}
+
+.keyframe-time-track {
+    height: 30px;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(58, 58, 58);
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(34, 34, 34);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.tracks-scroll-view {
+    flex-grow: 1;
+}
+
+.tracks-container {
+    flex-grow: 1;
+    padding: 0 0 0 0;
+}
+
+.track-row {
+    height: 40px;
+    flex-direction: row;
+    align-items: center;
+    margin: 2px 0;
+    background-color: rgb(58, 58, 58);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.keyframe-markers-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-grow: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Keyframe markers styling */
+.keyframe-markers-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.keyframe-marker {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(255, 255, 0);
+    border-radius: 0;
+    transform-origin: center;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    rotate: 45deg;
+}
+
+.keyframe-marker:hover {
+    background-color: rgb(255, 255, 150);
+    border-color: rgb(255, 255, 255);
+}
+
+.keyframe-marker.selected {
+    background-color: rgb(255, 165, 0);
+    border-color: rgb(255, 255, 255);
+    border-width: 2px;
+}
+
+.timeline-cursor {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: rgb(255, 51, 51);
+    top: 0;
+    z-index: 100;
+}
+
+.timeline-cursor-head {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: rgb(255, 51, 51);
+    border-radius: 6px;
+    top: -6px;
+    left: -5px;
+    z-index: 101;
+}
+
+.timeline-cursor-line {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: rgb(255, 51, 51);
+    top: 0;
+}
+
+.scene-view-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    border-radius: 4px;
+    color: white;
+}
+
+.scene-view-overlay > * {
+    margin: 2px 0;
+}

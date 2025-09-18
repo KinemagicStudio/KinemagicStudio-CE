@@ -1,0 +1,22 @@
+{
+    "name": "Kinemagic.Apps.Studio.FeatureCore.VideoStreaming",
+    "rootNamespace": "",
+    "references": [
+        "EngineLooper.Annotations",
+        "Kinemagic.AppCore.Utils",
+        "Kinemagic.Apps.Studio.Contracts",
+        "Klak.Spout.Runtime",
+        "Klak.Syphon.Runtime",
+        "MessagePipe",
+        "UniTask"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

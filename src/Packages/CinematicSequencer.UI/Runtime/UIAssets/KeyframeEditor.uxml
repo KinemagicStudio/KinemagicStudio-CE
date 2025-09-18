@@ -1,0 +1,79 @@
+<UXML xmlns="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Packages/jp.sotanmochi.cinematicsequencer.ui/Runtime/UIAssets/KeyframeEditor.uss?fileID=7433441132597879392&amp;guid=bde5d19a26465482f9bce3b4f3d68fdc&amp;type=3#KeyframeEditor" />
+    <VisualElement name="keyframe-editor-root" class="keyframe-editor-container">
+        <VisualElement name="header-area" class="header-area" style="height: 5%; flex-direction: row; align-items: center;">
+            <Button name="close-button" text="Close" tooltip="Close Editor" class="toolbar-button" />
+            <Label text="Label" name="Title" />
+            <Button name="save-button" text="Save" tooltip="Save" class="toolbar-button" />
+        </VisualElement>
+        <VisualElement name="top-area" style="flex-grow: 0; flex-direction: row; height: 65%;">
+            <ScrollView name="property-editor-panel" class="panel-content" style="height: auto; flex-grow: 0; width: 25%;">
+                <Label text="Property Values" class="section-header" />
+                <Label text="Current Time" class="property-label" />
+                <Label text="0.00" name="time-value" class="property-value" />
+                <VisualElement class="separator" />
+            </ScrollView>
+            <VisualElement name="scene-view-container" style="flex-grow: 1; flex-direction: row;">
+                <VisualElement name="scene-view-menu" style="background-color: rgba(0, 0, 0, 0.5); padding: 8px; border-radius: 4px; z-index: 10;">
+                    <Label text="Roll" style="color: white; margin-bottom: 5px;" />
+                    <Slider name="camera-roll-slider" low-value="-180" high-value="180" value="0" style="width: 150px;" />
+                    <Label name="camera-roll-value" text="0°" style="color: white; margin-left: 5px;" />
+                </VisualElement>
+                <VisualElement name="scene-view-image-container" style="flex-grow: 1;" />
+            </VisualElement>
+        </VisualElement>
+        <VisualElement name="middle-area" class="middle-area" style="height: 5%;">
+            <VisualElement name="toolbar" class="toolbar">
+                <Button name="play-button" text="▶" tooltip="Play Clip" class="toolbar-button" />
+                <Button name="pause-button" text="⏸" tooltip="Pause Clip" class="toolbar-button" />
+                <Button name="stop-button" text="■" tooltip="Stop Clip" class="toolbar-button" />
+                <Button name="add-key-frame-button" text="Add Key Frame" tooltip="Add Key Frame" class="toolbar-button" />
+            </VisualElement>
+        </VisualElement>
+        <VisualElement name="dope-sheet-area" class="dope-sheet-area">
+            <VisualElement name="left-panel" class="left-panel" style="width: 20%;">
+                <VisualElement name="track-headers-spacer" class="track-headers-title time-ruler-sync" />
+                <VisualElement name="track-headers-spacer" class="track-headers-title time-ruler-sync" />
+                <ScrollView name="track-headers-scroll-view" class="track-headers-scroll-view">
+                    <VisualElement name="track-headers-container">
+                        <VisualElement name="track-header-sample" class="track-header" />
+                        <VisualElement name="track-header-sample" class="track-header" />
+                        <VisualElement name="track-header-sample" class="track-header" />
+                    </VisualElement>
+                </ScrollView>
+                <VisualElement name="track-headers-footer" style="flex-grow: 0; height: 30px;" />
+            </VisualElement>
+            <VisualElement name="right-panel" class="right-panel">
+                <ScrollView name="time-ruler-scroll-view" mode="Horizontal" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" class="time-ruler-scroll-view">
+                    <VisualElement name="time-ruler" class="time-ruler" style="flex-grow: 0; height: 30px; width: 3000px;">
+                        <VisualElement name="timeline-cursor" class="timeline-cursor" style="flex-grow: 1;">
+                            <VisualElement name="timeline-cursor-head" class="timeline-cursor-head" style="flex-grow: 1; top: 0;" />
+                            <VisualElement name="timeline-cursor-line" class="timeline-cursor-line" style="flex-grow: 1; bottom: 0; top: 1px; height: auto;" />
+                        </VisualElement>
+                    </VisualElement>
+                </ScrollView>
+                <ScrollView name="keyframe-time-scroll-view" mode="Horizontal" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" class="time-ruler-scroll-view">
+                    <VisualElement name="keyframe-time-track" class="keyframe-time-track" style="height: 30px; width: 3000px;">
+                        <VisualElement name="keyframe-marker" class="keyframe-marker" style="translate: 100px 0;" />
+                    </VisualElement>
+                </ScrollView>
+                <ScrollView name="tracks-scroll-view" horizontal-scroller-visibility="AlwaysVisible" mode="VerticalAndHorizontal" vertical-scroller-visibility="AlwaysVisible" class="tracks-scroll-view">
+                    <VisualElement name="tracks-content-container" class="tracks-container" style="flex-grow: 0; position: relative; top: 0; left: 0; overflow: visible; width: 3000px; height: auto;">
+                        <VisualElement name="tracks-container" style="flex-grow: 1;">
+                            <VisualElement name="track-row-sample" class="track-row">
+                                <VisualElement name="keyframe-marker" class="keyframe-marker" />
+                                <VisualElement name="keyframe-marker" class="keyframe-marker" style="translate: 100px 0;" />
+                            </VisualElement>
+                            <VisualElement name="track-row-sample" class="track-row">
+                                <VisualElement name="keyframe-marker" class="keyframe-marker" style="translate: 200px 0;" />
+                                <VisualElement name="keyframe-marker" class="keyframe-marker" style="translate: 0 0;" />
+                            </VisualElement>
+                            <VisualElement name="track-row-sample" class="track-row" />
+                        </VisualElement>
+                        <VisualElement name="tracks-area-playhead" class="timeline-cursor" />
+                    </VisualElement>
+                </ScrollView>
+            </VisualElement>
+        </VisualElement>
+    </VisualElement>
+</UXML>

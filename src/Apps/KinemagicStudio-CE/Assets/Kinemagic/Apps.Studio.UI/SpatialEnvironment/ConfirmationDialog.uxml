@@ -1,0 +1,13 @@
+<UXML xmlns="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="EnvironmentConfirmationDialog.uss?fileID=7433441132597879392&amp;guid=c2cc43fc35fdb44f18fa40b650ef4880&amp;type=3#EnvironmentConfirmationDialog" />
+    <VisualElement name="confirmation-dialog-container" class="dialog-container">
+        <VisualElement name="dialog-window" class="dialog-window">
+            <Label name="confirmation-title" text="Confirm" class="dialog-title" />
+            <Label name="confirmation-message" text="Are you sure you want to do this?" class="dialog-message" />
+            <VisualElement class="dialog-buttons">
+                <Button name="confirmation-ok-button" text="OK" class="dialog-button ok-button" />
+                <Button name="confirmation-cancel-button" text="Cancel" class="dialog-button cancel-button" />
+            </VisualElement>
+        </VisualElement>
+    </VisualElement>
+</UXML>

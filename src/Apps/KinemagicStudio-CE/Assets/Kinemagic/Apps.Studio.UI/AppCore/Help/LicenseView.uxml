@@ -1,0 +1,18 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements">
+    <Style src="LicenseView.uss" />
+    <engine:VisualElement name="license-overlay" class="license-overlay">
+        <engine:VisualElement name="license-dialog" class="license-dialog">
+            <engine:VisualElement name="license-header" class="license-header">
+                <engine:Label text="License Information" class="license-title" />
+                <!-- <engine:Button name="close-button" text="×" class="close-button" /> -->
+            </engine:VisualElement>
+            <!-- <engine:VisualElement name="license-tabs" class="license-tabs">
+                <engine:Button name="main-license-button" text="Main License" class="license-tab-button active" />
+                <engine:Button name="third-party-button" text="Third-Party Notices" class="license-tab-button" />
+            </engine:VisualElement> -->
+            <engine:ScrollView name="license-scroll" class="license-scroll" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="AlwaysVisible">
+                <engine:Label name="license-content" class="license-content" />
+            </engine:ScrollView>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

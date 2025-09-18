@@ -1,0 +1,122 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="CharacterLicenseView.uss?fileID=7433441132597879392&amp;guid=fbed7962b065b4e4291ace189f239750&amp;type=3#CharacterLicenseView" />
+    <engine:VisualElement name="dialog-container" class="dialog-container" style="top: 0; left: 25%; bottom: 0; right: 25%;">
+        <engine:VisualElement name="dialog-window" class="dialog-window" style="width: 100%; height: 100%;">
+            <engine:Label name="dialog-title" text="License Confirmation" class="dialog-title" />
+            <engine:VisualElement name="dialog-header" class="dialog-header">
+                <engine:Label name="dialog-header-text" text="Please confirm the license terms before using this model." class="dialog-header-text" />
+            </engine:VisualElement>
+            <engine:VisualElement name="dialog-content" class="dialog-content">
+                <engine:ScrollView name="license-info-scroll-view" class="license-info-scroll">
+                    <engine:VisualElement name="license-info-container" class="license-info-container">
+                        <engine:VisualElement name="license-info" style="flex-grow: 1; flex-direction: row;">
+                            <engine:VisualElement name="thumbnail-container" class="thumbnail-container" style="width: auto; height: auto; flex-direction: row; margin-right: 10px; margin-left: 0;">
+                                <engine:Image name="thumbnail-image" class="thumbnail-image" style="width: 256px; height: 256px;" />
+                            </engine:VisualElement>
+                            <engine:VisualElement name="license-section" class="license-section" style="width: auto; height: auto; margin-top: 10px; margin-bottom: 10px; flex-grow: 1;">
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="model-format-label" text="Format" class="license-info-label" />
+                                    <engine:Label name="model-format-value" class="license-info-value" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="model-name-label" text="Name" class="license-info-label" />
+                                    <engine:Label name="model-name-value" class="license-info-value" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="version-label" text="Version" class="license-info-label" />
+                                    <engine:Label name="version-value" class="license-info-value" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="authors-label" text="Authors" class="license-info-label" />
+                                    <engine:Label name="authors-value" class="license-info-value" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="copyright-label" text="Copyright" class="license-info-label" />
+                                    <engine:Label name="copyright-value" class="license-info-value" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="contact-label" text="Contact Information" class="license-info-label" />
+                                    <engine:Label name="contact-value" class="license-info-value" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="reference-label" text="References" class="license-info-label" />
+                                    <engine:Label name="reference-value" class="license-info-value" />
+                                </engine:VisualElement>
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                        <engine:VisualElement name="license-info" style="flex-grow: 1; flex-direction: row;">
+                            <engine:VisualElement name="license-section" class="license-section" style="width: auto; margin-top: 0; flex-grow: 1;">
+                                <engine:Label text="Usage" class="section-title" />
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="avatar-use-label" text="Avatar Use" class="license-info-label" />
+                                    <engine:Label name="avatar-use-value" class="license-info-value" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="violent-usage-label" text="Excessively Violent" class="license-info-label" />
+                                    <engine:Label name="violent-usage-value" class="license-info-value" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="sexual-usage-label" text="Excessively Sexual" class="license-info-label" />
+                                    <engine:Label name="sexual-usage-value" class="license-info-value" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="political-or-religious-usage-label" text="Political or Religious" class="license-info-label" />
+                                    <engine:Label name="political-or-religious-usage-value" class="license-info-value" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="antisocial-or-hate-usage-label" text="Antisocial or Hate" class="license-info-label" />
+                                    <engine:Label name="antisocial-or-hate-usage-value" class="license-info-value" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="commercial-use-label" text="Commercial Use" class="license-info-label" />
+                                    <engine:Label name="commercial-use-value" class="license-info-value" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="other-permission-label" text="Other Permission" class="license-info-label" />
+                                    <engine:Label name="other-permission-value" class="license-info-value" />
+                                </engine:VisualElement>
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                        <engine:VisualElement name="license-info" style="flex-grow: 1; flex-direction: row;">
+                            <engine:VisualElement name="license-section" class="license-section" style="width: auto; margin-top: 0; flex-grow: 1;">
+                                <engine:Label text="License" class="section-title" />
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="attribution-label" text="Attribution" class="license-info-label" />
+                                    <engine:Label name="attribution-value" class="license-info-value" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="redistribution-label" text="Redistribution" class="license-info-label" />
+                                    <engine:Label name="redistribution-value" class="license-info-value" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="modification-label" text="Modification" class="license-info-label" />
+                                    <engine:Label name="modification-value" class="license-info-value" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="license-label" text="License" class="license-info-label" />
+                                    <engine:Label name="license-value" class="license-info-value" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="third-party-license-label" text="Third Party License" class="license-info-label" />
+                                    <engine:Label name="third-party-license-value" class="license-info-value" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="license-row" class="license-info-row">
+                                    <engine:Label name="other-license-url-label" text="Other License URL" class="license-info-label" />
+                                    <engine:Label name="other-license-url-value" class="license-info-value" />
+                                </engine:VisualElement>
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                </engine:ScrollView>
+                <engine:VisualElement name="agreement-section" class="agreement-section" style="margin-top: 10px; margin-bottom: 10px;">
+                    <engine:Toggle name="agreement-toggle" text="I agree to the terms of use and license" value="false" class="agreement-toggle" />
+                </engine:VisualElement>
+            </engine:VisualElement>
+            <engine:VisualElement name="dialog-actions" class="dialog-actions" style="margin-top: 10px;">
+                <engine:Button name="language-button" text="English / 日本語" class="language-button" />
+                <engine:Button name="accept-button" text="Accept" class="accept-button" />
+                <engine:Button name="decline-button" text="Decline" class="decline-button" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

@@ -1,0 +1,12 @@
+<UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="UnityEngine.UIElements" schemaLocation="UnityEngine.UIElements ../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="NodeEditorStyles.uss?fileID=7433441132597879392&amp;guid=3ce687b9cc4c54657814568739bb1bb5&amp;type=3#NodeEditorStyles" />
+    <Style src="MathCalculatorStyles.uss?fileID=7433441132597879392&amp;guid=09a4ec3a736484d18852b88ff1be1489&amp;type=3#MathCalculatorStyles" />
+    <VisualElement name="root" style="flex-grow: 1; background-color: rgb(45, 45, 45);">
+        <VisualElement name="toolbar" style="height: 40px; flex-direction: row; background-color: rgb(26, 26, 26);">
+            <Button name="add-number-button" text="Add Number" style="width: 120px; margin: 5px;" />
+            <Button name="add-operation-button" text="Add Operation" style="width: 120px; margin: 5px;" />
+            <Button name="add-result-button" text="Add Result" style="width: 120px; margin: 5px;" />
+        </VisualElement>
+        <VisualElement name="graph-container" style="width: auto; height: auto; flex-grow: 1; position: absolute; top: 40px; left: 0; bottom: 0; right: 0;" />
+    </VisualElement>
+</UXML>

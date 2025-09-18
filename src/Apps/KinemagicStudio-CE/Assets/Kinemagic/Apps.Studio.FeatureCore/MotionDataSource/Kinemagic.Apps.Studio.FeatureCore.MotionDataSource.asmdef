@@ -1,0 +1,20 @@
+{
+    "name": "Kinemagic.Apps.Studio.FeatureCore.MotionDataSource",
+    "rootNamespace": "",
+    "references": [
+        "Kinemagic.Apps.Studio.Contracts",
+        "Kinemagic.AppCore.Utils",
+        "EngineLooper.Annotations",
+        "UniTask",
+        "MessagePipe"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

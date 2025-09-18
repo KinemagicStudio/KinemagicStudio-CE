@@ -1,0 +1,20 @@
+{
+    "name": "Kinemagic.Apps.Studio.FeatureCore.CinematicSequencer",
+    "rootNamespace": "",
+    "references": [
+        "Kinemagic.Apps.Studio.Contracts",
+        "EngineLooper.Annotations",
+        "UniTask",
+        "MessagePipe",
+        "CinematicSequencer"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

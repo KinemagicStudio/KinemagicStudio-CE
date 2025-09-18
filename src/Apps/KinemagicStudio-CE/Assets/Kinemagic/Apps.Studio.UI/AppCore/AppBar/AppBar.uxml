@@ -1,0 +1,11 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="AppBar.uss?fileID=7433441132597879392&amp;guid=a11d10e408c4e435689b955119722943&amp;type=3#AppBar" />
+    <engine:VisualElement name="app-bar" class="appbar">
+        <engine:VisualElement name="appbar-spacer" class="appbar-spacer" />
+        <engine:VisualElement name="ip-address-container" style="flex-direction: row;">
+            <engine:Button name="update-ip-address-button" text="↻" class="update-ip-address-button" />
+            <engine:Label name="ip-address-display" text="Local IP: 255.255.255.255" class="ip-address-display" />
+        </engine:VisualElement>
+        <engine:Label name="fps-display" text="FPS: 000.0" class="fps-display" />
+    </engine:VisualElement>
+</engine:UXML>

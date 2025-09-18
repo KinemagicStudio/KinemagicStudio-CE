@@ -1,0 +1,9 @@
+{
+    "name": "jp.sotanmochi.runtimenodegraph",
+    "version": "0.2.0",
+    "displayName": "RuntimeNodeGraph",
+    "license": "MIT",
+    "dependencies": {
+        "studio.shortsleeve.contextualmenuplayer": "0.1.0"
+    }
+}

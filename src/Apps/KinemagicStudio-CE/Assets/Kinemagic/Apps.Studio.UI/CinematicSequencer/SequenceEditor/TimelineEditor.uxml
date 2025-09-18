@@ -1,0 +1,127 @@
+<UXML xmlns="UnityEngine.UIElements" xmlns:appui="Unity.AppUI.UI" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Kinemagic.Apps.Studio.UI/CinematicSequencer/SequenceEditor/TimelineEditor.uss?fileID=7433441132597879392&amp;guid=70db82e3ba626436fbf342852dee8623&amp;type=3#TimelineEditor" />
+    <appui:Panel name="sequence-editor-root" class="sequence-editor-root" style="position: absolute; top: 50px; bottom: 50px; height: auto;">
+        <VisualElement name="top-area" style="flex-grow: 0; flex-direction: row; height: 70%;">
+            <VisualElement name="library-view-container" class="panel-content" style="height: auto; flex-grow: 0; width: 25%; display: flex; flex-direction: column;">
+                <VisualElement name="library-tabs" class="library-tabs">
+                    <Button name="timeline-tab" text="Timeline" tooltip="Timeline Library" class="tab-button selected" />
+                    <Button name="camera-tab" text="Camera" tooltip="Camera Animation Library" class="tab-button" />
+                    <!-- TODO -->
+                    <!--
+                    <Button name="light-tab" text="Light" tooltip="Light Animation Library" class="tab-button" />
+                    <Button name="audio-tab" text="Audio" tooltip="Audio Clip Library" class="tab-button" />
+                    <Button name="effect-tab" text="Effect" tooltip="Visual Effect Library" class="tab-button" />
+                    -->
+                </VisualElement>
+                <VisualElement name="library-actions" class="library-actions" style="padding: 5px; flex-direction: row;">
+                    <Button name="create-new-item-button" text="Create New" tooltip="Create new item" class="create-button" style="flex-grow: 1;" />
+                    <Button name="refresh-library-button" text="↻" tooltip="Refresh library" class="refresh-button" style="width: 30px;" />
+                </VisualElement>
+                <ScrollView name="library-items-scroll-view" class="library-items-scroll-view" style="flex-grow: 1;">
+                    <VisualElement name="timeline-tab-content" class="tab-content">
+                        <VisualElement class="library-item">
+                            <Label text="Timeline_01" />
+                        </VisualElement>
+                    </VisualElement>
+                    <VisualElement name="camera-tab-content" class="tab-content hidden">
+                        <VisualElement class="library-item">
+                            <Label text="Dolly Zoom" />
+                        </VisualElement>
+                        <VisualElement class="library-item">
+                            <Label text="Orbit" />
+                        </VisualElement>
+                        <VisualElement class="library-item">
+                            <Label text="Pan" />
+                        </VisualElement>
+                    </VisualElement>
+                    <VisualElement name="light-tab-content" class="tab-content hidden">
+                        <VisualElement class="library-item">
+                            <Label text="Flicker" />
+                        </VisualElement>
+                        <VisualElement class="library-item">
+                            <Label text="Pulse" />
+                        </VisualElement>
+                        <VisualElement class="library-item">
+                            <Label text="Color Shift" />
+                        </VisualElement>
+                    </VisualElement>
+                    <VisualElement name="audio-tab-content" class="tab-content hidden">
+                        <VisualElement class="library-item">
+                            <Label text="Ambient" />
+                        </VisualElement>
+                        <VisualElement class="library-item">
+                            <Label text="Sound Effect" />
+                        </VisualElement>
+                        <VisualElement class="library-item">
+                            <Label text="Music" />
+                        </VisualElement>
+                    </VisualElement>
+                    <VisualElement name="effect-tab-content" class="tab-content hidden">
+                        <VisualElement class="library-item">
+                            <Label text="Particle System" />
+                        </VisualElement>
+                        <VisualElement class="library-item">
+                            <Label text="Screen Effect" />
+                        </VisualElement>
+                        <VisualElement class="library-item">
+                            <Label text="Post-Processing" />
+                        </VisualElement>
+                    </VisualElement>
+                </ScrollView>
+            </VisualElement>
+            <VisualElement name="scene-view-container" style="flex-grow: 1; flex-direction: row;">
+                <VisualElement name="scene-view-menu" style="background-color: rgba(0, 0, 0, 0.5); padding: 8px; border-radius: 4px; z-index: 10;">
+                    <Label text="Camera ID" style="color: white; margin-bottom: 5px;" />
+                    <DropdownField name="camera-id-dropdown" choices="Scene View,Camera 1,Camera 2,Camera 3,Camera 4,Camera 5,Camera 6,Camera 7,Camera 8" value="Camera 1" style="flex-direction: column; align-items: center; -unity-font-style: bold; -unity-text-align: upper-center;" />
+                    <Label text="Roll" style="color: white; margin-top: 10px; margin-bottom: 5px;" />
+                    <Slider name="camera-roll-slider" low-value="-180" high-value="180" value="0" style="width: 150px;" />
+                    <Label name="camera-roll-value" text="0°" style="color: white; margin-left: 5px;" />
+                </VisualElement>
+                <VisualElement name="scene-view-image-container" style="flex-grow: 1;" />
+            </VisualElement>
+        </VisualElement>
+        <VisualElement name="middle-area" class="header-area" style="height: 5%;">
+            <VisualElement name="toolbar" class="toolbar">
+                <appui:IconButton size="L" icon="play" name="play-button" text="Play" tooltip="Play Clip" />
+                <appui:IconButton size="L" icon="pause" name="pause-button" text="Pause" tooltip="Pause Timeline" />
+                <appui:IconButton size="L" icon="stop" name="stop-button" text="Stop" tooltip="Stop Timeline" />
+                <VisualElement class="toolbar-spacer" />
+                <Label name="time-display" text="00:00.000" class="time-display" />
+            </VisualElement>
+        </VisualElement>
+        <VisualElement name="bottom-area" class="main-content-area">
+            <VisualElement name="left-panel" class="left-panel" style="width: 20%;">
+                <VisualElement name="track-headers-title" class="track-headers-title time-ruler-sync" />
+                <ScrollView name="track-headers-scroll-view" class="track-headers-scroll-view">
+                    <VisualElement name="track-headers-container">
+                        <VisualElement name="track-header-sample" class="track-header" />
+                        <VisualElement name="track-header-sample" class="track-header" />
+                        <VisualElement name="track-header-sample" class="track-header" />
+                    </VisualElement>
+                </ScrollView>
+                <VisualElement name="track-headers-footer" style="flex-grow: 0; height: 30px;" />
+            </VisualElement>
+            <VisualElement name="right-panel" class="right-panel">
+                <ScrollView name="time-ruler-scroll-view" mode="Horizontal" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden">
+                    <VisualElement name="time-ruler" class="time-ruler" />
+                </ScrollView>
+                <ScrollView name="tracks-scroll-view" horizontal-scroller-visibility="AlwaysVisible" mode="VerticalAndHorizontal" vertical-scroller-visibility="AlwaysVisible" class="tracks-scroll-view">
+                    <VisualElement name="tracks-container" class="tracks-container" style="flex-grow: 0; position: relative; top: 0; left: 0; overflow: visible;">
+                        <VisualElement name="track-row-sample" class="track-row" />
+                        <VisualElement name="track-row-sample" class="track-row" />
+                        <VisualElement name="track-row-sample" class="track-row" />
+                    </VisualElement>
+                    <VisualElement name="clips-container" class="clips-container" style="top: 0; bottom: 0; height: auto;">
+                        <VisualElement name="sample-clip" class="timeline-clip camera-clip" style="transform-origin: center; translate: 300px 2px; width: 100px;">
+                            <Label text="Label" class="clip-label" />
+                        </VisualElement>
+                        <VisualElement name="sample-clip" class="timeline-clip light-clip" style="transform-origin: center; translate: 150px 2px; width: 100px;">
+                            <Label text="Label" class="clip-label" />
+                        </VisualElement>
+                    </VisualElement>
+                    <VisualElement name="track-area-cursor" class="timeline-cursor" style="position: absolute; height: auto; top: 0; bottom: 0;" />
+                </ScrollView>
+            </VisualElement>
+        </VisualElement>
+    </appui:Panel>
+</UXML>

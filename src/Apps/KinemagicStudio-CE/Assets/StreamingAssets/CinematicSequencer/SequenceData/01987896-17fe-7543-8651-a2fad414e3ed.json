@@ -1,0 +1,26 @@
+{
+  "CinematicSequencerFormatVersion": "0.1.0",
+  "Id": "01987896-17fe-7543-8651-a2fad414e3ed",
+  "Name": "Sequence_Sample_01",
+  "TrackCount": 1,
+  "Tracks": [
+    {
+      "Name": "CameraPose_1",
+      "Type": "CameraPose",
+      "TargetId": 1,
+      "ClipCount": 1,
+      "Clips": [
+        {
+          "Type": "CameraPose",
+          "TargetId": 1,
+          "StartTime": 2.94500017,
+          "Duration": 60.0000038,
+          "TimeScale": 1.0,
+          "EndTime": 62.9450035,
+          "ClipDataId": "019878ad-dc9d-7e3c-b753-650a67ca4d68"
+        }
+      ],
+      "EndTime": 65.595
+    }
+  ]
+}

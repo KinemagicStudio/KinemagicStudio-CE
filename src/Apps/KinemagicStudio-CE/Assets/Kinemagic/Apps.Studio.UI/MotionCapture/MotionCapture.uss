@@ -1,0 +1,104 @@
+.node-info-container {
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.status-container {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+
+.status-label {
+    font-size: 12px;
+    color: rgb(220, 220, 220);
+    -unity-font-style: bold;
+}
+
+.status-not-started {
+    background-color: rgba(255, 64, 50, 1);
+}
+
+.status-in-progress {
+    background-color: rgba(40, 176, 45, 1);
+}
+
+.status-stalled {
+    background-color: rgba(210, 105, 0, 1);
+}
+
+.status-completed {
+    background-color: rgba(127, 30, 30, 1);
+}
+
+/* Server info */
+.server-info {
+    margin-top: 4px;
+}
+
+.info-label {
+    font-size: 11px;
+    color: rgb(200, 200, 200);
+    margin-bottom: 2px;
+}
+
+/* Side panel */
+#side-panel {
+    border-right-width: 2px;
+    border-right-color: rgb(35, 35, 35);
+}
+
+#data-source-form Label {
+    color: rgb(200, 200, 200);
+    margin-bottom: 3px;
+}
+
+#data-source-form IntegerField,
+#data-source-form TextField,
+#data-source-form DropdownField {
+    background-color: rgb(42, 42, 42);
+    border-color: rgb(28, 28, 28);
+    border-width: 1px;
+    border-radius: 3px;
+    padding: 2px 4px;
+}
+
+#add-data-source-button {
+    background-color: rgb(70, 120, 180);
+    border-color: rgb(50, 90, 140);
+    color: white;
+    border-radius: 3px;
+    -unity-font-style: bold;
+}
+
+#add-data-source-button:hover {
+    background-color: rgb(85, 135, 195);
+}
+
+#add-data-source-button:active {
+    background-color: rgb(55, 105, 165);
+}
+
+/* Port types */
+.port-type-bodytracking {
+    background-color: rgb(100, 150, 200);
+    border-color: rgb(80, 120, 160);
+}
+
+.port-type-fingertracking {
+    background-color: rgb(150, 200, 100);
+    border-color: rgb(120, 160, 80);
+}
+
+.port-type-facetracking {
+    background-color: rgb(200, 150, 100);
+    border-color: rgb(160, 120, 80);
+}
+
+.port-type-eyetracking {
+    background-color: rgba(200, 100, 100, 1);
+    border-color: rgba(160, 80, 80, 1);
+}

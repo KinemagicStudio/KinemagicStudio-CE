@@ -1,0 +1,112 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="CameraControlView.uss?fileID=7433441132597879392&amp;guid=c0159f5ddfc3045e38e68d06d67278b6&amp;type=3#CameraControlView" />
+    <engine:VisualElement name="view-container" style="flex-grow: 1; position: absolute; top: 50px; bottom: 50px; right: 0; left: 0;">
+        <engine:VisualElement name="raycast-area" style="flex-grow: 1; right: 100px; left: 100px; position: absolute; bottom: 0; top: 0;" />
+        <engine:VisualElement name="camera-control-container" class="camera-control-container" style="bottom: 0; flex-shrink: 1; flex-grow: 1; right: 0; width: 90px; top: 0; margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 0; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; height: auto; position: absolute; color: rgba(27, 27, 27, 0.5); background-color: rgba(40, 40, 40, 0.75);">
+            <engine:DropdownField label="Camera" name="camera-selector" style="flex-direction: column; align-items: center; -unity-font-style: bold; -unity-text-align: upper-center;" />
+            <engine:VisualElement name="VisualElement" class="parameter-group" style="bottom: auto; flex-grow: 0; align-items: center; margin-bottom: 0; margin-top: 20px;">
+                <engine:Label text="Focal&#10;Length" name="Label" class="parameter-label" style="flex-shrink: 1; margin-right: 2px; padding-left: 2px; -unity-font-style: bold; -unity-text-align: upper-center;" />
+                <engine:VisualElement name="VisualElement" class="slider-container" style="flex-grow: 0; align-items: center; flex-direction: column; align-content: center; justify-content: flex-start;">
+                    <engine:Label name="focal-length-value" text="50.0mm" class="parameter-value" style="padding-right: 1px; margin-right: 2px; flex-grow: 0; -unity-text-align: middle-center;" />
+                    <engine:Slider name="focal-length-slider" direction="Vertical" class="parameter-slider unity-base-slider--vertical" style="margin-right: 1px; height: 200px; flex-grow: 0;" />
+                </engine:VisualElement>
+            </engine:VisualElement>
+            <engine:VisualElement name="VisualElement" class="parameter-group" style="display: flex; align-items: center; margin-bottom: 0; margin-top: 8px;">
+                <engine:Label text="Post&#10;Exposure" name="Label" class="parameter-label" style="margin-right: 2px; padding-left: 2px; flex-grow: 0; flex-shrink: 1; -unity-font-style: bold; -unity-text-align: upper-center;" />
+                <engine:VisualElement class="slider-container" style="flex-direction: column; flex-grow: 0; justify-content: flex-start; align-content: center;">
+                    <engine:Label name="post-exposure-value" text="0.00" class="parameter-value" style="flex-grow: 0; padding-right: 1px; margin-right: 2px; -unity-text-align: middle-center;" />
+                    <engine:Slider name="post-exposure-slider" direction="Vertical" class="parameter-slider" style="bottom: auto; flex-grow: 0; height: 200px; margin-right: 1px;" />
+                </engine:VisualElement>
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="menu-container" class="target-tracking-container" style="position: absolute; top: 0; bottom: auto; right: 90px; width: 360px; margin-top: 8px; margin-right: 12px; margin-bottom: 0; margin-left: 0; background-color: rgba(40, 40, 40, 0.75); padding-top: 16px; padding-right: 28px; padding-bottom: 16px; padding-left: 4px;">
+            <engine:Foldout text="Post Processing" name="post-processing-foldout" value="false">
+                <engine:DropdownField name="effect-type-dropdown" class="effect-dropdown" style="min-width: auto;" />
+                <engine:VisualElement name="effect-parameters-container" class="effect-parameters-container">
+                    <engine:VisualElement name="color-adjustment-container" class="effect-container" style="display: flex; background-color: rgba(50, 50, 50, 0); border-left-color: rgba(70, 70, 70, 0); border-right-color: rgba(70, 70, 70, 0); border-top-color: rgba(70, 70, 70, 0); border-bottom-color: rgba(70, 70, 70, 0); padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                        <engine:Label text="Color Adjustment" class="effect-title" />
+                        <engine:VisualElement class="parameter-group">
+                            <engine:Toggle name="color-adjustment-enabled" text="Enabled" class="effect-toggle" />
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Contrast" class="parameter-label" />
+                                <engine:Slider name="contrast-slider" class="parameter-slider" />
+                            </engine:VisualElement>
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Hue Shift" class="parameter-label" />
+                                <engine:Slider name="hue-shift-slider" class="parameter-slider" />
+                            </engine:VisualElement>
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Saturation" class="parameter-label" />
+                                <engine:Slider name="saturation-slider" class="parameter-slider" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement name="tone-mapping-container" class="effect-container" style="flex-grow: 0; display: flex; background-color: rgba(50, 50, 50, 0); border-left-color: rgba(70, 70, 70, 0); border-right-color: rgba(70, 70, 70, 0); border-top-color: rgba(70, 70, 70, 0); border-bottom-color: rgba(70, 70, 70, 0); padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                        <engine:Label text="Tone Mapping" name="Label" class="effect-title" />
+                        <engine:VisualElement class="parameter-group">
+                            <engine:Toggle name="tone-mapping-enabled" text="Enabled" class="effect-toggle" style="flex-grow: 1;" />
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Mode" class="parameter-label" />
+                                <engine:DropdownField name="tone-mapping-mode" class="parameter-dropdown" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement name="bloom-container" class="effect-container" style="display: flex; background-color: rgba(50, 50, 50, 0); border-left-color: rgba(70, 70, 70, 0); border-right-color: rgba(70, 70, 70, 0); border-top-color: rgba(70, 70, 70, 0); border-bottom-color: rgba(70, 70, 70, 0); padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                        <engine:Label text="Bloom" class="effect-title" />
+                        <engine:VisualElement class="parameter-group">
+                            <engine:Toggle name="bloom-enabled" text="Enabled" class="effect-toggle" />
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Threshold" class="parameter-label" />
+                                <engine:Slider name="bloom-threshold" class="parameter-slider" />
+                            </engine:VisualElement>
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Intensity" class="parameter-label" />
+                                <engine:Slider name="bloom-intensity" class="parameter-slider" />
+                            </engine:VisualElement>
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Scatter" class="parameter-label" />
+                                <engine:Slider name="bloom-scatter" class="parameter-slider" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement name="lens-flare-container" class="effect-container" style="display: flex; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; background-color: rgba(50, 50, 50, 0); border-left-color: rgba(70, 70, 70, 0); border-right-color: rgba(70, 70, 70, 0); border-top-color: rgba(70, 70, 70, 0); border-bottom-color: rgba(70, 70, 70, 0);">
+                        <engine:Label text="Screen Space Lens Flare" class="effect-title" />
+                        <engine:VisualElement class="parameter-group">
+                            <engine:Toggle name="lens-flare-enabled" text="Enabled" class="effect-toggle" />
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Intensity" class="parameter-label" />
+                                <engine:Slider name="lens-flare-intensity" class="parameter-slider" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement name="depth-of-field-container" class="effect-container" style="display: flex; background-color: rgba(50, 50, 50, 0); border-left-color: rgba(70, 70, 70, 0); border-right-color: rgba(70, 70, 70, 0); border-top-color: rgba(70, 70, 70, 0); border-bottom-color: rgba(70, 70, 70, 0); padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                        <engine:Label text="Depth of Field" class="effect-title" />
+                        <engine:VisualElement class="parameter-group">
+                            <engine:Toggle name="depth-of-field-enabled" text="Enabled" class="effect-toggle" />
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Blade Count" class="parameter-label" />
+                                <engine:SliderInt name="blade-count" class="parameter-slider" />
+                            </engine:VisualElement>
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Blade Curvature" class="parameter-label" />
+                                <engine:Slider name="blade-curvature" class="parameter-slider" />
+                            </engine:VisualElement>
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Blade Rotation" class="parameter-label" />
+                                <engine:Slider name="blade-rotation" class="parameter-slider" />
+                            </engine:VisualElement>
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Focus Distance" class="parameter-label" />
+                                <engine:Slider name="focus-distance" class="parameter-slider" />
+                            </engine:VisualElement>
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Aperture" class="parameter-label" />
+                                <engine:SliderInt name="aperture-slider" class="parameter-slider" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+            </engine:Foldout>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

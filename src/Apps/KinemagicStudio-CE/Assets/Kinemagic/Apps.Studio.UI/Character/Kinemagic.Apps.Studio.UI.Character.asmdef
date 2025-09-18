@@ -1,0 +1,24 @@
+{
+    "name": "Kinemagic.Apps.Studio.UI.Character",
+    "rootNamespace": "",
+    "references": [
+        "Kinemagic.Apps.Studio.UI",
+        "Kinemagic.Apps.Studio.Contracts",
+        "Kinemagic.AppCore.Utils",
+        "EngineLooper.Annotations",
+        "R3.Unity",
+        "UniTask",
+        "MessagePipe",
+        "VRM10",
+        "VRMToolkit"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

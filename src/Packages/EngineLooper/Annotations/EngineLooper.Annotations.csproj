@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;netstandard2.1</TargetFrameworks>
+    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <BaseOutputPath>.\bin~</BaseOutputPath>
+    <IntermediateOutputPath>.\obj~</IntermediateOutputPath>
+  </PropertyGroup>
+
+</Project>

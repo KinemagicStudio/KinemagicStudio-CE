@@ -1,0 +1,26 @@
+/* 数値ノード */
+.number-node {
+    background-color: rgb(60, 100, 150);
+}
+
+.number-node .node-header {
+    background-color: rgb(40, 70, 120);
+}
+
+/* 演算ノード */
+.operation-node {
+    background-color: rgb(150, 100, 60);
+}
+
+.operation-node .node-header {
+    background-color: rgb(120, 70, 40);
+}
+
+/* 結果ノード */
+.result-node {
+    background-color: rgb(60, 150, 100);
+}
+
+.result-node .node-header {
+    background-color: rgb(40, 120, 70);
+}

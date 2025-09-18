@@ -1,0 +1,15 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Kinemagic.Apps.Studio.UI/EnvironmentScene/EnvironmentModelList.uss?fileID=7433441132597879392&amp;guid=b36171bfba3af422aa6199caadd09af7&amp;type=3#EnvironmentModelList" />
+    <engine:VisualElement name="environment-model-list-root-container" class="environment-model-list-root-container" style="right: 75%; position: absolute; top: 50px; left: 0; bottom: 50px;">
+        <engine:VisualElement name="environment-model-list-panel" class="environment-model-list-panel" style="width: 100%; min-width: auto; height: 100%; display: flex;">
+            <engine:Label name="environment-model-list-header" text="Environment Models" class="environment-model-list-header" />
+            <engine:VisualElement name="environment-model-list-toolbar" class="toolbar">
+                <engine:Button name="refresh-button" text="Refresh" class="toolbar-button" />
+                <engine:Button name="open-folder-button" text="Open Folder" class="toolbar-button" />
+            </engine:VisualElement>
+            <engine:ScrollView name="environment-model-list-scroll" class="environment-model-list-scroll">
+                <engine:VisualElement name="environment-model-list-container" class="environment-model-list-container" />
+            </engine:ScrollView>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

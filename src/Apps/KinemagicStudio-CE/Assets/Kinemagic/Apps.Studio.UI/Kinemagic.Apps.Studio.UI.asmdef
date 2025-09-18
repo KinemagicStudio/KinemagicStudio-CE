@@ -1,0 +1,22 @@
+{
+    "name": "Kinemagic.Apps.Studio.UI",
+    "rootNamespace": "",
+    "references": [
+        "Kinemagic.AppCore.Utils",
+        "Kinemagic.Apps.Studio.Contracts",
+        "EngineLooper.Annotations",
+        "R3.Unity",
+        "UniTask",
+        "MessagePipe",
+        "RuntimeNodeGraph"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

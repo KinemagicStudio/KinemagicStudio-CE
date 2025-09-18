@@ -1,0 +1,23 @@
+{
+    "name": "Kinemagic.Apps.Studio.FeatureCore.CameraSystem",
+    "rootNamespace": "",
+    "references": [
+        "Unity.Cinemachine",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.RenderPipelines.Universal.Runtime",
+        "Kinemagic.AppCore.Utils",
+        "Kinemagic.Apps.Studio.Contracts",
+        "EngineLooper.Annotations",
+        "UniTask",
+        "MessagePipe"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
