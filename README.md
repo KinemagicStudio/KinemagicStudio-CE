@@ -29,6 +29,8 @@ src/
     └── RuntimeNodeGraph/
 ```
 
+<img src="./docs/ProjectDependencyDiagram-StudioApp.png" width="1280">
+
 ## オープンソース版と製品版について
 - [Kinemagic Studio](https://kinemagicstudio.github.io/)の各エディションは、オープンソース版（Community Edition）をベースにして開発されています。
 - 製品版は、「有償のアセット・ライブラリ」や「オープンソースとして公開・再配布できないアセット・ライブラリ」などを含めてビルドされています。
