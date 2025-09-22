@@ -6,6 +6,7 @@
 - Unity 6000.0.56f1
 
 ## プロジェクト構成
+### フォルダ構成
 ```
 src/
 ├── Apps/
@@ -29,7 +30,24 @@ src/
     └── RuntimeNodeGraph/
 ```
 
+### 依存関係
 <img src="./docs/ProjectDependencyDiagram-StudioApp.png" width="1280">
+
+### 依存ライブラリ
+- [UniTask](https://github.com/Cysharp/UniTask)
+- [MessagePipe](https://github.com/Cysharp/MessagePipe)
+- [R3](https://github.com/Cysharp/R3)
+- [VContainer](https://github.com/hadashiA/VContainer)
+- [UniVRM](https://github.com/vrm-c/UniVRM)
+- [glTFast](https://github.com/atteneder/glTFast)
+- [uOSC](https://github.com/hecomi/uOSC)
+- [KlakSpout](https://github.com/keijiro/KlakSpout)
+- [KlakSyphon](https://github.com/keijiro/KlakSyphon)
+- [NuGetForUnity](https://github.com/GlitchEnzo/NuGetForUnity)
+- [ContextualMenuPlayer](https://github.com/sotanmochi/ContextualMenuPlayer)
+- [FacialCaptureSync](https://github.com/sotanmochi/FacialCaptureSync)
+- [UniVRM Material Extensions](https://github.com/sotanmochi/UniVRMMaterialExtensions)
+- [lilToon](https://github.com/lilxyzw/lilToon)
 
 ## オープンソース版と製品版について
 - [Kinemagic Studio](https://kinemagicstudio.github.io/)の各エディションは、オープンソース版（Community Edition）をベースにして開発されています。
