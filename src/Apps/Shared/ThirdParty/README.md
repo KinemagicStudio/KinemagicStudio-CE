@@ -16,3 +16,7 @@
 - [lilToon 1.8.5](https://github.com/lilxyzw/lilToon)  
   MIT License  
   Copyright (c) 2020-2024 lilxyzw  
+
+- [Noto Sans JP](https://fonts.google.com/noto/specimen/Noto+Sans+JP)
+  SIL OPEN FONT LICENSE Version 1.1  
+  Copyright 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'  
