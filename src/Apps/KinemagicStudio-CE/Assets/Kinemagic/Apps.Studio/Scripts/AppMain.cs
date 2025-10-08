@@ -22,7 +22,7 @@ namespace Kinemagic.Apps.Studio
 
         public void Initialize()
         {
-            Application.targetFrameRate = 120;
+            Application.targetFrameRate = 60;
             InitializeAsync().Forget();
         }
 

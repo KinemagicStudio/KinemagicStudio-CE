@@ -90,6 +90,7 @@
 .license-info-label {
     min-width: 150px;
     -unity-font-style: bold;
+    -unity-font-definition: url("/Assets/ThirdParty/Fonts/Noto_Sans_JP/static/NotoSansJP-Regular.ttf");
     color: rgb(180, 180, 180);
 }
 
