@@ -110,6 +110,7 @@ MonoBehaviour:
   - {fileID: -7801803829276295052}
   - {fileID: 1809759895363000805}
   - {fileID: -3242193386418080133}
+  - {fileID: 2792838625961342723}
 --- !u!114 &1809759895363000805
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -177,6 +178,34 @@ MonoBehaviour:
   chromaticAbberationIntensity:
     m_OverrideState: 0
     m_Value: 0.5
+--- !u!114 &2792838625961342723
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b5f30e42ce942dd9a32f2c88419259, type: 3}
+  m_Name: ScreenEdgeColor
+  m_EditorClassIdentifier: 
+  active: 1
+  IntensityParam:
+    m_OverrideState: 1
+    m_Value: 0.1
+  TopLeftColorParam:
+    m_OverrideState: 1
+    m_Value: {r: 0, g: 1, b: 1, a: 1}
+  TopRightColorParam:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 0, b: 1, a: 1}
+  BottomLeftColorParam:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  BottomRightColorParam:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &3488507225873661028
 MonoBehaviour:
   m_ObjectHideFlags: 3

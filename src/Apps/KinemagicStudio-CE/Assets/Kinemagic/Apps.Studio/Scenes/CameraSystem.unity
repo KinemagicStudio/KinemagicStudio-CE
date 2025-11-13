@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 37762768}
   - component: {fileID: 37762767}
   - component: {fileID: 37762770}
+  - component: {fileID: 37762779}
   m_Layer: 0
   m_Name: ControlView
   m_TagString: Untagged
@@ -321,6 +322,7 @@ MonoBehaviour:
   _depthOfFieldView: {fileID: 37762768}
   _bloomView: {fileID: 37762767}
   _screenSpaceLensFlareView: {fileID: 37762770}
+  _screenEdgeColorView: {fileID: 37762779}
 --- !u!114 &37762772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,6 +384,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75c07639fd7df4f08a0b30cc63097a76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _document: {fileID: 37762774}
+--- !u!114 &37762779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37762764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8845b6c77bab64c4683fe7f14cdc39b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _document: {fileID: 37762774}
