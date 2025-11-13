@@ -1,4 +1,4 @@
-<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" editor-extension-mode="False">
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:appui="Unity.AppUI.UI" xmlns:editor="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="CameraControlView.uss?fileID=7433441132597879392&amp;guid=c0159f5ddfc3045e38e68d06d67278b6&amp;type=3#CameraControlView" />
     <engine:VisualElement name="view-container" style="flex-grow: 1; position: absolute; top: 50px; bottom: 50px; right: 0; left: 0;">
         <engine:VisualElement name="raycast-area" style="flex-grow: 1; right: 100px; left: 100px; position: absolute; bottom: 0; top: 0;" />
@@ -102,6 +102,62 @@
                             <engine:VisualElement class="parameter-row">
                                 <engine:Label text="Aperture" class="parameter-label" />
                                 <engine:SliderInt name="aperture-slider" class="parameter-slider" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement name="screen-edge-color-container" class="effect-container" style="display: flex; background-color: rgba(50, 50, 50, 0); border-left-color: rgba(70, 70, 70, 0); border-right-color: rgba(70, 70, 70, 0); border-top-color: rgba(70, 70, 70, 0); border-bottom-color: rgba(70, 70, 70, 0); padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                        <engine:Label text="Screen Edge Color" class="effect-title" />
+                        <engine:VisualElement class="parameter-group">
+                            <engine:Toggle name="screen-edge-color-enabled" text="Enabled" class="effect-toggle" />
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Intensity" class="parameter-label" />
+                                <engine:Slider name="screen-edge-color-intensity" class="parameter-slider" />
+                            </engine:VisualElement>
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Top Left Color" class="parameter-label" />
+                                <appui:ColorField name="screen-edge-color-top-left" class="parameter-color-field" />
+                            </engine:VisualElement>
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Top Right Color" class="parameter-label" />
+                                <appui:ColorField name="screen-edge-color-top-right" class="parameter-color-field" />
+                            </engine:VisualElement>
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Bottom Left Color" class="parameter-label" />
+                                <appui:ColorField name="screen-edge-color-bottom-left" class="parameter-color-field" />
+                            </engine:VisualElement>
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Bottom Right Color" class="parameter-label" />
+                                <appui:ColorField name="screen-edge-color-bottom-right" class="parameter-color-field" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement name="screen-space-outline-container" class="effect-container" style="display: flex; background-color: rgba(50, 50, 50, 0); border-left-color: rgba(70, 70, 70, 0); border-right-color: rgba(70, 70, 70, 0); border-top-color: rgba(70, 70, 70, 0); border-bottom-color: rgba(70, 70, 70, 0); padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                        <engine:Label text="Screen Space Outline" class="effect-title" />
+                        <engine:VisualElement class="parameter-group">
+                            <engine:Toggle name="screen-space-outline-enabled" text="Enabled" class="effect-toggle" />
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Scale" class="parameter-label" />
+                                <engine:Slider name="screen-space-outline-scale" class="parameter-slider" />
+                            </engine:VisualElement>
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Edge Color" class="parameter-label" />
+                                <appui:ColorField name="screen-space-outline-edge-color" class="parameter-color-field" />
+                            </engine:VisualElement>
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Normal Threshold" class="parameter-label" />
+                                <engine:Slider name="screen-space-outline-normal-threshold" class="parameter-slider" />
+                            </engine:VisualElement>
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Depth Threshold" class="parameter-label" />
+                                <engine:Slider name="screen-space-outline-depth-threshold" class="parameter-slider" />
+                            </engine:VisualElement>
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Depth Normal Threshold" class="parameter-label" />
+                                <engine:Slider name="screen-space-outline-depth-normal-threshold" class="parameter-slider" />
+                            </engine:VisualElement>
+                            <engine:VisualElement class="parameter-row">
+                                <engine:Label text="Depth Normal Threshold Scale" class="parameter-label" />
+                                <engine:Slider name="screen-space-outline-depth-normal-threshold-scale" class="parameter-slider" />
                             </engine:VisualElement>
                         </engine:VisualElement>
                     </engine:VisualElement>

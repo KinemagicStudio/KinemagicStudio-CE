@@ -1,3 +1,5 @@
+using System.Numerics;
+
 namespace Kinemagic.Apps.Studio.Contracts.CameraSystem
 {
     public interface IPostProcessingParameters
@@ -56,5 +58,15 @@ namespace Kinemagic.Apps.Studio.Contracts.CameraSystem
         public float StreaksThreshold { get; set; } = 0.5f;
         public float StreaksOrientation { get; set; } = 0f;
         public float ChromaticAberrationIntensity { get; set; } = 0f;
+    }
+
+    public sealed class ScreenEdgeColorParameters : IPostProcessingParameters
+    {
+        public bool IsEnabled { get; set; }
+        public float Intensity { get; set; } = 0f;
+        public Vector4 TopLeftColor { get; set; } = new(0, 1, 1, 1);     // Cyan
+        public Vector4 TopRightColor { get; set; } = new(1, 0, 1, 1);    // Magenta
+        public Vector4 BottomLeftColor { get; set; } = new(1, 1, 0, 1);  // Yellow
+        public Vector4 BottomRightColor { get; set; } = new(1, 0, 0, 1); // Red
     }
 }

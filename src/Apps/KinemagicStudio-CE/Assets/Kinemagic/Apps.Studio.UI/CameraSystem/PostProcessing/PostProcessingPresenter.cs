@@ -65,6 +65,10 @@ namespace Kinemagic.Apps.Studio.UI.CameraSystem
             _postProcessingView.ScreenSpaceLensFlareView.ValueChanged
                 .Subscribe(parameters => PublishUpdateCommand(_currentCameraId, parameters))
                 .AddTo(_disposables);
+
+            _postProcessingView.ScreenEdgeColorView.ValueChanged
+                .Subscribe(parameters => PublishUpdateCommand(_currentCameraId, parameters))
+                .AddTo(_disposables);
         }
 
         private void OnPostProcessingSignalReceived(ICameraSystemSignal signal)
@@ -92,6 +96,10 @@ namespace Kinemagic.Apps.Studio.UI.CameraSystem
 
                     case ScreenSpaceLensFlareParameters screenSpaceLensFlare:
                         _postProcessingView.ScreenSpaceLensFlareView.UpdateParameters(screenSpaceLensFlare);
+                        break;
+
+                    case ScreenEdgeColorParameters screenEdgeColor:
+                        _postProcessingView.ScreenEdgeColorView.UpdateParameters(screenEdgeColor);
                         break;
                 }
             }
