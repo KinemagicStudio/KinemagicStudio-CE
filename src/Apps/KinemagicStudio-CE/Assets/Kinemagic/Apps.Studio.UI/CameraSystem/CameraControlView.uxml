@@ -131,36 +131,6 @@
                             </engine:VisualElement>
                         </engine:VisualElement>
                     </engine:VisualElement>
-                    <engine:VisualElement name="screen-space-outline-container" class="effect-container" style="display: flex; background-color: rgba(50, 50, 50, 0); border-left-color: rgba(70, 70, 70, 0); border-right-color: rgba(70, 70, 70, 0); border-top-color: rgba(70, 70, 70, 0); border-bottom-color: rgba(70, 70, 70, 0); padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
-                        <engine:Label text="Screen Space Outline" class="effect-title" />
-                        <engine:VisualElement class="parameter-group">
-                            <engine:Toggle name="screen-space-outline-enabled" text="Enabled" class="effect-toggle" />
-                            <engine:VisualElement class="parameter-row">
-                                <engine:Label text="Scale" class="parameter-label" />
-                                <engine:Slider name="screen-space-outline-scale" class="parameter-slider" />
-                            </engine:VisualElement>
-                            <engine:VisualElement class="parameter-row">
-                                <engine:Label text="Edge Color" class="parameter-label" />
-                                <appui:ColorField name="screen-space-outline-edge-color" class="parameter-color-field" />
-                            </engine:VisualElement>
-                            <engine:VisualElement class="parameter-row">
-                                <engine:Label text="Normal Threshold" class="parameter-label" />
-                                <engine:Slider name="screen-space-outline-normal-threshold" class="parameter-slider" />
-                            </engine:VisualElement>
-                            <engine:VisualElement class="parameter-row">
-                                <engine:Label text="Depth Threshold" class="parameter-label" />
-                                <engine:Slider name="screen-space-outline-depth-threshold" class="parameter-slider" />
-                            </engine:VisualElement>
-                            <engine:VisualElement class="parameter-row">
-                                <engine:Label text="Depth Normal Threshold" class="parameter-label" />
-                                <engine:Slider name="screen-space-outline-depth-normal-threshold" class="parameter-slider" />
-                            </engine:VisualElement>
-                            <engine:VisualElement class="parameter-row">
-                                <engine:Label text="Depth Normal Threshold Scale" class="parameter-label" />
-                                <engine:Slider name="screen-space-outline-depth-normal-threshold-scale" class="parameter-slider" />
-                            </engine:VisualElement>
-                        </engine:VisualElement>
-                    </engine:VisualElement>
                 </engine:VisualElement>
             </engine:Foldout>
         </engine:VisualElement>
