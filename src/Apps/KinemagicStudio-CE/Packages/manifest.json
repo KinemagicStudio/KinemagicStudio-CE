@@ -7,6 +7,7 @@
     "com.github-glitchenzo.nugetforunity": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity#v4.3.0",
     "com.hecomi.uosc": "https://github.com/hecomi/uOSC.git?path=Assets/uOSC#v2.2.0",
     "com.kinemagicstudio.appcore.utils": "file:../../Shared/Kinemagic.AppCore.Utils",
+    "org.nesnausk.gaussian-splatting": "https://github.com/sotanmochi/UnityGaussianSplatting.git?path=package#runtime-importer",
     "com.unity.ai.navigation": "2.0.9",
     "com.unity.cinemachine": "3.1.4",
     "com.unity.collab-proxy": "2.9.3",
