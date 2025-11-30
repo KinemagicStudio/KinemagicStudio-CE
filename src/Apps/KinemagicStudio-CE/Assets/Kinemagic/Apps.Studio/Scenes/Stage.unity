@@ -497,6 +497,7 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects: []
   _spatialCoordinateProvider: {fileID: 1850792704}
+  _gaussianSplatSceneConfig: {fileID: 11400000, guid: 8262fbb3f6031437a91d0064a831c32b, type: 2}
 --- !u!1 &1850792703
 GameObject:
   m_ObjectHideFlags: 0
