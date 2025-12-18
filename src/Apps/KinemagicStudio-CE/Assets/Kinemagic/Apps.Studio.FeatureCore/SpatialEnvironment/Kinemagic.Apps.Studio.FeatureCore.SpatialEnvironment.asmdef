@@ -5,7 +5,9 @@
         "Kinemagic.Apps.Studio.Contracts",
         "EngineLooper.Annotations",
         "UniTask",
-        "MessagePipe"
+        "MessagePipe",
+        "Unity.Mathematics",
+        "Unity.RenderPipelines.Universal.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
