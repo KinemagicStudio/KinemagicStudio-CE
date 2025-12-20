@@ -13,12 +13,17 @@ namespace Kinemagic.Apps.Studio.FeatureCore.SpatialEnvironment
         private readonly GaussianSplatSceneConfig _config;
         private readonly IBinaryDataStorage _binaryDataStorage;
         private readonly GaussianSplatImporter _gaussianSplatImporter;
+        private readonly EnvironmentLightingManager _environmentLightingManager;
 
-        public GaussianSplatSceneImporter(GaussianSplatSceneConfig config, IBinaryDataStorage binaryDataStorage)
+        public GaussianSplatSceneImporter(
+            GaussianSplatSceneConfig config,
+            IBinaryDataStorage binaryDataStorage,
+            EnvironmentLightingManager environmentLightingManager)
         {
             _config = config;
             _binaryDataStorage = binaryDataStorage;
             _gaussianSplatImporter = new(GaussianSplatImporter.DataQuality.Medium);
+            _environmentLightingManager = environmentLightingManager;
         }
 
         public async UniTask<SpatialEnvironmentScene> LoadAsync(string key, BinaryDataStorageType storageType,
@@ -42,9 +47,10 @@ namespace Kinemagic.Apps.Studio.FeatureCore.SpatialEnvironment
 
                 // Create a new GameObject to render the splat
                 var rootObject = new GameObject($"GaussianSplat_{name}");
-                var renderer = rootObject.AddComponent<GaussianSplatRenderer>();
+                rootObject.layer = LayerMask.NameToLayer(Constants.RenderingLayerName);
 
                 // Assign the loaded asset
+                var renderer = rootObject.AddComponent<GaussianSplatRenderer>();
                 renderer.m_Asset = splatAsset;
 
                 // Assign shaders if provided
@@ -62,6 +68,10 @@ namespace Kinemagic.Apps.Studio.FeatureCore.SpatialEnvironment
                 // Force enable to trigger resource creation
                 renderer.enabled = false;
                 renderer.enabled = true;
+
+                // Update environment lighting
+                _environmentLightingManager.RenderingLayerMask = LayerMask.NameToLayer(Constants.RenderingLayerName);
+                _environmentLightingManager.UpdateEnvironmentLightingFromScene();
 
                 return new SpatialEnvironmentScene(rootObject);
             }

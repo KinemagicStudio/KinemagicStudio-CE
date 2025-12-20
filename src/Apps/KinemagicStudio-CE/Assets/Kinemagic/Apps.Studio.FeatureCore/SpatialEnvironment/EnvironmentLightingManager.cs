@@ -40,6 +40,11 @@ namespace Kinemagic.Apps.Studio.FeatureCore.SpatialEnvironment
         private Texture _previousCustomReflection;
         private float _previousReflectionIntensity;
 
+        public LayerMask RenderingLayerMask
+        {
+            set => _renderingLayerMask = value;
+        }
+
         #region MonoBehaviour Functions
 
         void Awake()
@@ -50,7 +55,6 @@ namespace Kinemagic.Apps.Studio.FeatureCore.SpatialEnvironment
         void OnEnable()
         {
             _renderCamera.enabled = false;
-            _renderCamera.cullingMask = _renderingLayerMask;
         }
 
         void OnDestroy()
