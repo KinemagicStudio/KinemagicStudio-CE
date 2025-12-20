@@ -371,7 +371,7 @@
       "hash": "43d717453dcb50d7c881b8616e1b80b489208122"
     },
     "org.nesnausk.gaussian-splatting": {
-      "version": "https://github.com/sotanmochi/UnityGaussianSplatting.git?path=package#runtime-importer",
+      "version": "https://github.com/sotanmochi/UnityGaussianSplatting.git?path=package#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -379,7 +379,7 @@
         "com.unity.collections": "2.1.4",
         "com.unity.mathematics": "1.2.6"
       },
-      "hash": "58c83be455276336b0cc35d6029370290d2ca0f9"
+      "hash": "8816c1a4c78dcd00e392fd0473d27196b5dc7793"
     },
     "studio.shortsleeve.contextualmenuplayer": {
       "version": "https://github.com/sotanmochi/ContextualMenuPlayer.git?path=Assets/ContextualMenuPlayer#0.1.0",
