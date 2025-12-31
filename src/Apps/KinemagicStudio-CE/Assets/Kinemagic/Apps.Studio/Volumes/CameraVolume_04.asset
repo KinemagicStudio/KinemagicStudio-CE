@@ -62,7 +62,7 @@ MonoBehaviour:
   active: 1
   IntensityParam:
     m_OverrideState: 1
-    m_Value: 0.1
+    m_Value: 0
   TopLeftColorParam:
     m_OverrideState: 1
     m_Value: {r: 0, g: 1, b: 1, a: 1}
