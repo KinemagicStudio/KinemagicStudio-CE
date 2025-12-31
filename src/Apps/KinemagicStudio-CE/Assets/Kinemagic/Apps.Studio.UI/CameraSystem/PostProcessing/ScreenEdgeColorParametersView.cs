@@ -33,13 +33,12 @@ namespace Kinemagic.Apps.Studio.UI.CameraSystem
         public void UpdateParameters(ScreenEdgeColorParameters parameters)
         {
             _enabledToggle.value = parameters.IsEnabled;
-            _intensitySlider.value = parameters.Intensity;
+            _intensitySlider.value = parameters.PerceptualIntensity;
             _topLeftColorField.value = Vector4ToColor(parameters.TopLeftColor);
             _topRightColorField.value = Vector4ToColor(parameters.TopRightColor);
             _bottomLeftColorField.value = Vector4ToColor(parameters.BottomLeftColor);
             _bottomRightColorField.value = Vector4ToColor(parameters.BottomRightColor);
-
-            _intensitySlider.label = parameters.Intensity.ToString("F2");
+            _intensitySlider.label = parameters.Intensity.ToString("F3");
         }
 
         public void SetActive(bool isActive)
@@ -67,7 +66,7 @@ namespace Kinemagic.Apps.Studio.UI.CameraSystem
             _enabledToggle.RegisterValueChangedCallback(evt => NotifyValueChanged());
             _intensitySlider.RegisterValueChangedCallback(evt =>
             {
-                _intensitySlider.label = evt.newValue.ToString("F2");
+                _intensitySlider.label = ScreenEdgeColorParameters.ConvertToLinear(evt.newValue).ToString("F3");
                 NotifyValueChanged();
             });
             _topLeftColorField.RegisterValueChangedCallback(evt => NotifyValueChanged());
@@ -83,7 +82,7 @@ namespace Kinemagic.Apps.Studio.UI.CameraSystem
             _onValueChanged.OnNext(new ScreenEdgeColorParameters
             {
                 IsEnabled = _enabledToggle.value,
-                Intensity = _intensitySlider.value,
+                PerceptualIntensity = _intensitySlider.value,
                 TopLeftColor = ColorToVector4(_topLeftColorField.value),
                 TopRightColor = ColorToVector4(_topRightColorField.value),
                 BottomLeftColor = ColorToVector4(_bottomLeftColorField.value),

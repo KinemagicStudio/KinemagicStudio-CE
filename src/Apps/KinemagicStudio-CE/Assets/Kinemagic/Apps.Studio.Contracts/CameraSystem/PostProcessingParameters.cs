@@ -1,3 +1,4 @@
+using System;
 using System.Numerics;
 
 namespace Kinemagic.Apps.Studio.Contracts.CameraSystem
@@ -62,11 +63,38 @@ namespace Kinemagic.Apps.Studio.Contracts.CameraSystem
 
     public sealed class ScreenEdgeColorParameters : IPostProcessingParameters
     {
+        private const float PowerExponent = 2.5f;
+
         public bool IsEnabled { get; set; }
+
+        /// <summary>
+        /// Linear intensity value used by shader and rendering pipeline (0.0-1.0).
+        /// </summary>
         public float Intensity { get; set; } = 0f;
+
+        /// <summary>
+        /// Perceptual intensity value (0.0-1.0).
+        /// Non-linearly mapped from <see cref="Intensity"/> to enable finer control in the lower intensity range.
+        /// </summary>
+        public float PerceptualIntensity
+        {
+            get => ConvertToPerceptual(Intensity);
+            set => Intensity = ConvertToLinear(value);
+        }
+
         public Vector4 TopLeftColor { get; set; } = new(0, 1, 1, 1);     // Cyan
         public Vector4 TopRightColor { get; set; } = new(1, 0, 1, 1);    // Magenta
         public Vector4 BottomLeftColor { get; set; } = new(1, 1, 0, 1);  // Yellow
         public Vector4 BottomRightColor { get; set; } = new(1, 0, 0, 1); // Red
+
+        public static float ConvertToLinear(float perceptualValue)
+        {
+            return MathF.Pow(perceptualValue, PowerExponent);
+        }
+
+        public static float ConvertToPerceptual(float linearValue)
+        {
+            return MathF.Pow(linearValue, 1f / PowerExponent);
+        }
     }
 }
