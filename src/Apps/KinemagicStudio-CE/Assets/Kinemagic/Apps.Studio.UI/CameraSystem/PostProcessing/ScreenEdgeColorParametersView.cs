@@ -66,6 +66,10 @@ namespace Kinemagic.Apps.Studio.UI.CameraSystem
             _enabledToggle.RegisterValueChangedCallback(evt => NotifyValueChanged());
             _intensitySlider.RegisterValueChangedCallback(evt =>
             {
+                if (Mathf.Approximately(evt.newValue, evt.previousValue))
+                {
+                    return;
+                }
                 _intensitySlider.label = ScreenEdgeColorParameters.ConvertToLinear(evt.newValue).ToString("F3");
                 NotifyValueChanged();
             });
