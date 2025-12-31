@@ -195,8 +195,6 @@ namespace Kinemagic.Apps.Studio.FeatureCore.CameraSystem
             }
             else if (command is PostProcessingUpdateCommand postProcessingUpdateCommand)
             {
-                Debug.Log($"[{nameof(CameraSystem)}] PostProcessingUpdate - CameraId: {postProcessingUpdateCommand.CameraId}");
-
                 if (_cameraActorManager.TryGetCameraActor(postProcessingUpdateCommand.CameraId, out var cameraActor))
                 {
                     if (postProcessingUpdateCommand.Parameters is ColorAdjustmentParameters colorAdjustment)
