@@ -10,7 +10,7 @@ namespace Kinemagic.Apps.Studio.FeatureCore.SpatialEnvironment
 {
     public sealed class EnvironmentModelInfoLocalRepository : IEnvironmentModelInfoRepository, IDisposable
     {
-        public const string FileExtension = "glb";
+        private static readonly string[] SupportedExtensions = { "glb", "spz" };
 
         private readonly List<EnvironmentModelInfo> _cachedModels = new();
         private readonly string[] _directories = {
@@ -54,17 +54,23 @@ namespace Kinemagic.Apps.Studio.FeatureCore.SpatialEnvironment
         {
             try
             {
-                var files = Directory.GetFiles(directoryPath, $"*.{FileExtension}", SearchOption.AllDirectories);
-                foreach (var filePath in files)
+                foreach (var extension in SupportedExtensions)
                 {
-                    cancellationToken.ThrowIfCancellationRequested();
-
-                    var modelInfo = CreateModelInfoAsync(directoryPath, filePath);
-                    if (modelInfo != null)
+                    var files = Directory.GetFiles(directoryPath, $"*.{extension}", SearchOption.AllDirectories);
+                    foreach (var filePath in files)
                     {
-                        _cachedModels.Add(modelInfo);
+                        cancellationToken.ThrowIfCancellationRequested();
+
+                        var modelInfo = CreateModelInfoAsync(directoryPath, filePath);
+                        if (modelInfo != null)
+                        {
+                            _cachedModels.Add(modelInfo);
+                        }
                     }
                 }
+
+                _cachedModels.Sort((x, y)
+                    => string.Compare(x.ResourceKey, y.ResourceKey, StringComparison.OrdinalIgnoreCase));
             }
             catch (OperationCanceledException)
             {

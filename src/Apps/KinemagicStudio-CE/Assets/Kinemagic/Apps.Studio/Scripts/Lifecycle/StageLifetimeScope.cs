@@ -12,6 +12,10 @@ namespace Kinemagic.Apps.Studio.Lifecycle
         [Header("Character System")]
         [SerializeField] SpatialCoordinateProvider _spatialCoordinateProvider;
 
+        [Header("Environment System")]
+        [SerializeField] GaussianSplatSceneConfig _gaussianSplatSceneConfig;
+        [SerializeField] EnvironmentLightingManager _environmentLightingManager;
+
         protected override void Configure(IContainerBuilder builder)
         {
             ConfigureCharacterSystem(builder);
@@ -44,7 +48,12 @@ namespace Kinemagic.Apps.Studio.Lifecycle
 
             builder.Register<EnvironmentModelInfoLocalRepository>(Lifetime.Singleton).AsImplementedInterfaces();
 
-            builder.Register<GlbImporter>(Lifetime.Singleton).AsImplementedInterfaces();
+            builder.Register<CompositeEnvironmentSceneProvider>(Lifetime.Singleton).AsImplementedInterfaces();
+            builder.Register<GlbImporter>(Lifetime.Singleton).AsSelf();
+            builder.Register<GaussianSplatSceneImporter>(Lifetime.Singleton).WithParameter(_gaussianSplatSceneConfig).AsSelf();
+
+            builder.RegisterInstance(_environmentLightingManager).AsSelf();
+
             builder.Register<FeatureCore.SpatialEnvironment.LocalFileBinaryDataStorage>(Lifetime.Singleton).AsImplementedInterfaces();
         }
     }

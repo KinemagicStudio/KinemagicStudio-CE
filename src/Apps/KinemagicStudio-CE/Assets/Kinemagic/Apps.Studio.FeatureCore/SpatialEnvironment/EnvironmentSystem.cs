@@ -47,7 +47,10 @@ namespace Kinemagic.Apps.Studio.FeatureCore.SpatialEnvironment
 
         public async UniTask InitializeAsync()
         {
-            await StreamingAssetsSynchronizer.SynchronizeFilesAsync(Constants.PersistentDataDirectoryName, "*.glb", _cancellationTokenSource.Token);
+            await UniTask.WhenAll(
+                StreamingAssetsSynchronizer.SynchronizeFilesAsync(Constants.PersistentDataDirectoryName, "*.glb", _cancellationTokenSource.Token),
+                StreamingAssetsSynchronizer.SynchronizeFilesAsync(Constants.PersistentDataDirectoryName, "*.spz", _cancellationTokenSource.Token)
+            );
 
             _currentScene = SpatialEnvironmentScene.CreateDefault();
 
