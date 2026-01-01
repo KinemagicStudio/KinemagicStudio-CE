@@ -7,6 +7,7 @@
         "Unity.RenderPipelines.Universal.Runtime",
         "Kinemagic.AppCore.Utils",
         "Kinemagic.Apps.Studio.Contracts",
+        "Kinemagic.RenderPipeline.Universal",
         "EngineLooper.Annotations",
         "UniTask",
         "MessagePipe"

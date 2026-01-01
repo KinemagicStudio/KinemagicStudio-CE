@@ -50,6 +50,13 @@
       "source": "local",
       "dependencies": {}
     },
+    "com.kinemagicstudio.renderpipeline.universal": {
+      "version": "https://github.com/KinemagicStudio/KinemagicRenderPipeline.git?path=src/UniversalRenderPipeline",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "41b187149fe69d054fe011c331b9831e8ba01f40"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.9",
       "depth": 0,

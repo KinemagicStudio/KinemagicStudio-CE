@@ -188,12 +188,13 @@ namespace Kinemagic.Apps.Studio.FeatureCore.CameraSystem
 
                     var screenSpaceLensFlare = cameraActor.GetScreenSpaceLensFlareParameters();
                     _signalPublisher.Publish(new PostProcessingUpdatedSignal(new CameraId(cameraActor.Id), screenSpaceLensFlare));
+
+                    var screenEdgeColor = cameraActor.GetScreenEdgeColorParameters();
+                    _signalPublisher.Publish(new PostProcessingUpdatedSignal(new CameraId(cameraActor.Id), screenEdgeColor));
                 }
             }
             else if (command is PostProcessingUpdateCommand postProcessingUpdateCommand)
             {
-                Debug.Log($"[{nameof(CameraSystem)}] PostProcessingUpdate - CameraId: {postProcessingUpdateCommand.CameraId}");
-
                 if (_cameraActorManager.TryGetCameraActor(postProcessingUpdateCommand.CameraId, out var cameraActor))
                 {
                     if (postProcessingUpdateCommand.Parameters is ColorAdjustmentParameters colorAdjustment)
@@ -258,6 +259,21 @@ namespace Kinemagic.Apps.Studio.FeatureCore.CameraSystem
                             {
                                 IsEnabled = lensFlare.IsEnabled,
                                 Intensity = lensFlare.Intensity
+                            }));
+                    }
+                    else if (postProcessingUpdateCommand.Parameters is ScreenEdgeColorParameters screenEdgeColor)
+                    {
+                        cameraActor.UpdateScreenEdgeColorParameters(screenEdgeColor);
+                        _signalPublisher.Publish(new PostProcessingUpdatedSignal(
+                            new CameraId(cameraActor.Id),
+                            new ScreenEdgeColorParameters()
+                            {
+                                IsEnabled = screenEdgeColor.IsEnabled,
+                                Intensity = screenEdgeColor.Intensity,
+                                TopLeftColor = screenEdgeColor.TopLeftColor,
+                                TopRightColor = screenEdgeColor.TopRightColor,
+                                BottomLeftColor = screenEdgeColor.BottomLeftColor,
+                                BottomRightColor = screenEdgeColor.BottomRightColor
                             }));
                     }
                 }

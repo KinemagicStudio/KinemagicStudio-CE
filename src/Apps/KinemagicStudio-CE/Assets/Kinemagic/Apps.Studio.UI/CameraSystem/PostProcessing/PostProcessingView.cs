@@ -15,6 +15,7 @@ namespace Kinemagic.Apps.Studio.UI.CameraSystem
             DepthOfField,
             Bloom,
             ScreenSpaceLensFlare,
+            ScreenEdgeColor,
         }
 
         [SerializeField] private UIDocument _document;
@@ -25,6 +26,7 @@ namespace Kinemagic.Apps.Studio.UI.CameraSystem
         [SerializeField] private DepthOfFieldParametersView _depthOfFieldView;
         [SerializeField] private BloomParametersView _bloomView;
         [SerializeField] private ScreenSpaceLensFlareParametersView _screenSpaceLensFlareView;
+        [SerializeField] private ScreenEdgeColorParametersView _screenEdgeColorView;
 
         private readonly Dictionary<PostProcessingEffectType, IPostProcessingEffectView> _effectViews = new();
 
@@ -36,6 +38,7 @@ namespace Kinemagic.Apps.Studio.UI.CameraSystem
         public DepthOfFieldParametersView DepthOfFieldView => _depthOfFieldView;
         public BloomParametersView BloomView => _bloomView;
         public ScreenSpaceLensFlareParametersView ScreenSpaceLensFlareView => _screenSpaceLensFlareView;
+        public ScreenEdgeColorParametersView ScreenEdgeColorView => _screenEdgeColorView;
 
         private void Start()
         {
@@ -54,6 +57,7 @@ namespace Kinemagic.Apps.Studio.UI.CameraSystem
             _effectViews.Add(PostProcessingEffectType.DepthOfField, _depthOfFieldView);
             _effectViews.Add(PostProcessingEffectType.Bloom, _bloomView);
             _effectViews.Add(PostProcessingEffectType.ScreenSpaceLensFlare, _screenSpaceLensFlareView);
+            _effectViews.Add(PostProcessingEffectType.ScreenEdgeColor, _screenEdgeColorView);
             foreach (var view in _effectViews.Values)
             {
                 view.SetActive(false);

@@ -5,6 +5,7 @@
         "Kinemagic.AppCore.Utils",
         "Kinemagic.Apps.Studio.Contracts",
         "EngineLooper.Annotations",
+        "Unity.AppUI",
         "R3.Unity",
         "UniTask",
         "MessagePipe",

@@ -1,5 +1,6 @@
 using Kinemagic.AppCore.Utils;
 using Kinemagic.Apps.Studio.Contracts.CameraSystem;
+using Kinemagic.Rendering.Universal;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -22,6 +23,7 @@ namespace Kinemagic.Apps.Studio.FeatureCore.CameraSystem
         private Tonemapping _tonemapping;
         private Bloom _bloom;
         private ScreenSpaceLensFlare _screenSpaceLensFlare;
+        private ScreenEdgeColor _screenEdgeColor;
 
         void Awake()
         {
@@ -52,6 +54,7 @@ namespace Kinemagic.Apps.Studio.FeatureCore.CameraSystem
                 _volume.profile.TryGet(out _tonemapping);
                 _volume.profile.TryGet(out _bloom);
                 _volume.profile.TryGet(out _screenSpaceLensFlare);
+                _volume.profile.TryGet(out _screenEdgeColor);
             }
         }
 
@@ -192,6 +195,19 @@ namespace Kinemagic.Apps.Studio.FeatureCore.CameraSystem
             };
         }
 
+        public ScreenEdgeColorParameters GetScreenEdgeColorParameters()
+        {
+            return new ScreenEdgeColorParameters
+            {
+                IsEnabled = _screenEdgeColor.active,
+                Intensity = _screenEdgeColor.Intensity,
+                TopLeftColor = ColorToVector4(_screenEdgeColor.TopLeftColor),
+                TopRightColor = ColorToVector4(_screenEdgeColor.TopRightColor),
+                BottomLeftColor = ColorToVector4(_screenEdgeColor.BottomLeftColor),
+                BottomRightColor = ColorToVector4(_screenEdgeColor.BottomRightColor)
+            };
+        }
+
         public void UpdateCameraProperties(CameraProperties cameraProperties)
         {
             FocalLength = cameraProperties.FocalLength;
@@ -235,6 +251,26 @@ namespace Kinemagic.Apps.Studio.FeatureCore.CameraSystem
         {
             _screenSpaceLensFlare.active = parameters.IsEnabled;
             _screenSpaceLensFlare.intensity.value = parameters.Intensity;
+        }
+
+        public void UpdateScreenEdgeColorParameters(ScreenEdgeColorParameters parameters)
+        {
+            _screenEdgeColor.active = parameters.IsEnabled;
+            _screenEdgeColor.IntensityParam.value = parameters.Intensity;
+            _screenEdgeColor.TopLeftColorParam.value = Vector4ToColor(parameters.TopLeftColor);
+            _screenEdgeColor.TopRightColorParam.value = Vector4ToColor(parameters.TopRightColor);
+            _screenEdgeColor.BottomLeftColorParam.value = Vector4ToColor(parameters.BottomLeftColor);
+            _screenEdgeColor.BottomRightColorParam.value = Vector4ToColor(parameters.BottomRightColor);
+        }
+
+        private static System.Numerics.Vector4 ColorToVector4(Color color)
+        {
+            return new System.Numerics.Vector4(color.r, color.g, color.b, color.a);
+        }
+
+        private static Color Vector4ToColor(System.Numerics.Vector4 vector)
+        {
+            return new Color(vector.X, vector.Y, vector.Z, vector.W);
         }
     }
 }
