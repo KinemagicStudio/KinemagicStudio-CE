@@ -2,8 +2,6 @@ using System;
 using System.Collections.Generic;
 #if USE_NEWTONSOFT_JSON
 using Newtonsoft.Json;
-#else
-using System.Text.Json.Serialization;
 #endif
 
 namespace CinematicSequencer
@@ -21,7 +19,9 @@ namespace CinematicSequencer
 
         public Guid Id { get; }
 
+#if USE_NEWTONSOFT_JSON
         [JsonIgnore]
+#endif
         public string FormatVersion => "2.0.0";
 
         public string Name
@@ -39,7 +39,9 @@ namespace CinematicSequencer
         /// <summary>
         /// 全トラック中の最大EndTimeから自動計算。変更時のみ再計算。
         /// </summary>
+#if USE_NEWTONSOFT_JSON
         [JsonIgnore]
+#endif
         public TimeRange Duration
         {
             get
@@ -51,7 +53,6 @@ namespace CinematicSequencer
 
         public IReadOnlyList<Track> Tracks => _tracks;
 
-        [JsonIgnore]
         public event Action<ModelChangeEvent> Changed;
 
         public Sequence(string name)
@@ -60,7 +61,9 @@ namespace CinematicSequencer
             _name = name;
         }
 
+#if USE_NEWTONSOFT_JSON
         [JsonConstructor]
+#endif
         public Sequence(Guid id, string name, List<Track> tracks)
         {
             Id = id;

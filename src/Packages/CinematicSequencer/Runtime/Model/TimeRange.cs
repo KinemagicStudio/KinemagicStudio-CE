@@ -1,8 +1,6 @@
 using System;
 #if USE_NEWTONSOFT_JSON
 using Newtonsoft.Json;
-#else
-using System.Text.Json.Serialization;
 #endif
 
 namespace CinematicSequencer
@@ -16,16 +14,24 @@ namespace CinematicSequencer
         public int StartMs { get; }
         public int DurationMs { get; }
 
+#if USE_NEWTONSOFT_JSON
         [JsonIgnore]
+#endif
         public int EndMs => StartMs + DurationMs;
 
+#if USE_NEWTONSOFT_JSON
         [JsonIgnore]
+#endif
         public float Start => StartMs * 0.001f;
 
+#if USE_NEWTONSOFT_JSON
         [JsonIgnore]
+#endif
         public float Duration => DurationMs * 0.001f;
 
+#if USE_NEWTONSOFT_JSON
         [JsonIgnore]
+#endif
         public float End => EndMs * 0.001f;
 
         public TimeRange(float startSeconds, float durationSeconds)
@@ -34,7 +40,9 @@ namespace CinematicSequencer
             DurationMs = (int)MathF.Round(durationSeconds * 1000f);
         }
 
+#if USE_NEWTONSOFT_JSON
         [JsonConstructor]
+#endif
         public TimeRange(int startMs, int durationMs)
         {
             StartMs = startMs;

@@ -1,3 +1,4 @@
+#if USE_NEWTONSOFT_JSON
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
@@ -86,3 +87,4 @@ namespace CinematicSequencer.Serialization
         }
     }
 }
+#endif

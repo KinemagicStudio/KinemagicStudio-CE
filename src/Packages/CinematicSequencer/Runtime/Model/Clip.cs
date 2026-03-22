@@ -1,8 +1,6 @@
 using System;
 #if USE_NEWTONSOFT_JSON
 using Newtonsoft.Json;
-#else
-using System.Text.Json.Serialization;
 #endif
 
 namespace CinematicSequencer
@@ -73,14 +71,15 @@ namespace CinematicSequencer
         /// <summary>
         /// 遅延ロード可能なClipAsset参照。
         /// </summary>
+#if USE_NEWTONSOFT_JSON
         [JsonIgnore]
+#endif
         public IClipAsset ClipAsset
         {
             get => _clipAsset;
             set => _clipAsset = value;
         }
 
-        [JsonIgnore]
         public event Action<ModelChangeEvent> Changed;
 
         public Clip(Guid clipAssetId, TimeRange placement)
@@ -91,7 +90,9 @@ namespace CinematicSequencer
             _sourceRange = new TimeRange(0, placement.DurationMs);
         }
 
+#if USE_NEWTONSOFT_JSON
         [JsonConstructor]
+#endif
         public Clip(Guid id, Guid clipAssetId, TimeRange placement, float playbackRate, TimeRange sourceRange)
         {
             Id = id;

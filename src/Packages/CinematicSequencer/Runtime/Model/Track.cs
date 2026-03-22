@@ -2,8 +2,6 @@ using System;
 using System.Collections.Generic;
 #if USE_NEWTONSOFT_JSON
 using Newtonsoft.Json;
-#else
-using System.Text.Json.Serialization;
 #endif
 
 namespace CinematicSequencer
@@ -49,7 +47,9 @@ namespace CinematicSequencer
         /// <summary>
         /// 全クリップを包含する時間範囲。
         /// </summary>
+#if USE_NEWTONSOFT_JSON
         [JsonIgnore]
+#endif
         public TimeRange TimeRange
         {
             get
@@ -59,7 +59,6 @@ namespace CinematicSequencer
             }
         }
 
-        [JsonIgnore]
         public event Action<ModelChangeEvent> Changed;
 
         public Track(string name, TrackType type, int targetId)
@@ -70,7 +69,9 @@ namespace CinematicSequencer
             TargetId = targetId;
         }
 
+#if USE_NEWTONSOFT_JSON
         [JsonConstructor]
+#endif
         public Track(Guid id, string name, TrackType type, int targetId, int sortOrder, List<Clip> clips)
         {
             Id = id;

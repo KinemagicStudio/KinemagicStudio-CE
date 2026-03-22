@@ -19,7 +19,7 @@ namespace CinematicSequencer.Animation
             PingPong,
         }
 
-        protected readonly List<Keyframe> _keys = new();
+        private readonly List<Keyframe> _keys = new();
 
         public IReadOnlyList<Keyframe> Keys => _keys;
         public int Length => _keys.Count;

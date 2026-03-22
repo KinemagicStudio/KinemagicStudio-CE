@@ -4,7 +4,6 @@ using System.IO;
 using System.Threading;
 using CinematicSequencer.Serialization;
 using Cysharp.Threading.Tasks;
-using Newtonsoft.Json.Linq;
 
 namespace CinematicSequencer.IO
 {
