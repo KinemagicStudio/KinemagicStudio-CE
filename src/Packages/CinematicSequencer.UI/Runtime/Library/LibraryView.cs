@@ -307,7 +307,7 @@ namespace CinematicSequencer.UI
         private void OnPointerMove(PointerMoveEvent evt)
         {
             if (!_isDragging || _dragPreview == null) return;
-            _dragPreview.transform.position = (Vector3)(evt.position - _rootWorldOffset);
+            _dragPreview.transform.position = evt.position - new Vector3(_rootWorldOffset.x, _rootWorldOffset.y, 0f);
         }
 
         private void OnPointerUp(PointerUpEvent evt)
@@ -344,7 +344,7 @@ namespace CinematicSequencer.UI
             label.AddToClassList("clip-label");
             _dragPreview.Add(label);
 
-            _dragPreview.transform.position = position - (Vector3)_rootWorldOffset;
+            _dragPreview.transform.position = position - new Vector3(_rootWorldOffset.x, _rootWorldOffset.y, 0f);
             _root.Add(_dragPreview);
         }
 

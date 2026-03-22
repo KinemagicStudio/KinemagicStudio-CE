@@ -15,8 +15,11 @@ namespace CinematicSequencer.UI
         public string ItemName { get; private set; }
         public TrackType? ItemType { get; private set; }
 
-        public event Action<Guid> OnClicked;
-        public event Action<Guid> OnDoubleClicked;
+        /// <summary>クリックコールバック。ListViewの再利用時に再代入されるためデリゲートプロパティ。</summary>
+        public Action<Guid> OnClicked { get; set; }
+
+        /// <summary>ダブルクリックコールバック。</summary>
+        public Action<Guid> OnDoubleClicked { get; set; }
 
         public LibraryItemElement()
         {
@@ -27,6 +30,7 @@ namespace CinematicSequencer.UI
             Add(_nameLabel);
 
             RegisterCallback<ClickEvent>(OnClick);
+            RegisterCallback<ContextualMenuPopulateEvent>(OnContextMenu);
         }
 
         public void Bind(ClipAssetInfo info)
@@ -38,9 +42,6 @@ namespace CinematicSequencer.UI
 
             ClearTypeClasses();
             AddToClassList(GetTrackTypeClass(info.Type));
-
-            // ClipAssetのみコンテキストメニューを登録
-            RegisterCallback<ContextualMenuPopulateEvent>(OnContextMenu);
         }
 
         public void Bind(SequenceInfo info)
