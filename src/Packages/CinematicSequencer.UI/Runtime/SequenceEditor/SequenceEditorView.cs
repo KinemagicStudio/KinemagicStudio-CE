@@ -75,6 +75,9 @@ namespace CinematicSequencer.UI
             _trackHeadersScrollView = _root.Q<ScrollView>(UIElementNames.TrackHeadersScrollViewName);
             _tracksScrollView = _root.Q<ScrollView>(UIElementNames.TracksScrollViewName);
 
+            // Clear UXML preview content before adding dynamic elements
+            ClearPreviewContent(_root);
+
             // TimeRuler
             _timeRuler = new TimeRulerElement();
             var timeRulerContainer = _root.Q("time-ruler");
@@ -91,6 +94,7 @@ namespace CinematicSequencer.UI
             // PlaybackToolbar
             _toolbar = new PlaybackToolbar();
             var toolbarContainer = _root.Q("playback-toolbar-container");
+            toolbarContainer?.Clear();
             if (toolbarContainer != null)
                 toolbarContainer.Add(_toolbar);
             else
@@ -303,6 +307,16 @@ namespace CinematicSequencer.UI
                 _clipElements.Remove(clipId);
             }
             _clipManipulators.Remove(clipId);
+        }
+
+        /// <summary>
+        /// Remove UXML preview-content elements so they don't duplicate runtime UI.
+        /// </summary>
+        private static void ClearPreviewContent(VisualElement root)
+        {
+            var previews = root.Query(className: "preview-content").ToList();
+            foreach (var el in previews)
+                el.RemoveFromHierarchy();
         }
 
         private void ClearAllUI()

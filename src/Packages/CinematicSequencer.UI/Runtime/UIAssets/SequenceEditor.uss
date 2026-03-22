@@ -1,49 +1,78 @@
 /* ==========================================================================
    CinematicSequencer v2 — SequenceEditor Styles
-   Layout, track headers, track content, clips, keyframes
+   Sidebar layout, track headers, track content, clips, keyframes
    ========================================================================== */
 
-/********** Layout **********/
+/********** Layout — Sidebar **********/
 .sequence-editor-root {
     width: 100%;
     height: 100%;
-    flex-direction: column;
+    flex-direction: row;
     background-color: var(--panel-bg);
 }
 
-.top-panel {
-    flex-direction: row;
-    height: 250px;
+/* Left sidebar: Library */
+.library-panel {
+    width: 240px;
+    min-width: 180px;
+    flex-shrink: 0;
+    border-right-width: 1px;
+    border-right-color: #222222;
+    background-color: #333333;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Right: Editor area (toolbar + timeline) */
+.editor-area {
+    flex-grow: 1;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/********** Playback toolbar container **********/
+.playback-toolbar-container {
+    flex-shrink: 0;
     border-bottom-width: 1px;
     border-bottom-color: #222222;
 }
 
-.library-panel {
-    width: 250px;
+/********** Timeline layout — Track headers + clips side by side **********/
+.sequence-panel {
+    flex-grow: 1;
+    flex-direction: row;
+    min-height: 0;
+}
+
+/* Track headers column (corner + scrollable list) */
+.track-headers-panel {
+    width: var(--track-header-width);
+    flex-shrink: 0;
+    flex-direction: column;
     border-right-width: 1px;
     border-right-color: #222222;
     background-color: #333333;
 }
 
-.scene-view-panel {
-    flex-grow: 1;
-    background-color: #1a1a1a;
-}
-
-.playback-toolbar-container {
+/* Corner cell (aligns with time-ruler height) */
+.track-headers-corner {
+    height: var(--ruler-height);
+    background-color: var(--header-bg);
     border-bottom-width: 1px;
     border-bottom-color: #222222;
+    justify-content: center;
+    padding: 0 8px;
+    flex-shrink: 0;
 }
 
-.sequence-panel {
-    flex-grow: 1;
-    flex-direction: row;
+.track-headers-corner__label {
+    color: #AAAAAA;
+    font-size: 11px;
+    -unity-font-style: bold;
 }
 
 .track-headers-scroll-view {
-    width: var(--track-header-width);
-    border-right-width: 1px;
-    border-right-color: #222222;
+    flex-grow: 1;
     background-color: #333333;
 }
 
@@ -51,10 +80,12 @@
     flex-grow: 1;
 }
 
+/* Timeline column */
 .timeline-panel {
     flex-grow: 1;
     flex-direction: column;
     background-color: var(--panel-bg);
+    min-width: 0;
 }
 
 .time-ruler {
@@ -62,6 +93,9 @@
     background-color: var(--header-bg);
     border-bottom-width: 1px;
     border-bottom-color: #222222;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
 }
 
 .tracks-scroll-view {
@@ -70,6 +104,7 @@
 
 .tracks-container {
     flex-grow: 1;
+    min-height: 100%;
 }
 
 .dialog-layer {
@@ -83,27 +118,29 @@
 .track-header {
     height: var(--track-height);
     padding: 0 8px;
-    background-color: #444444;
-    border-right-width: 1px;
-    border-right-color: #222222;
+    background-color: #3d3d3d;
+    border-bottom-width: 1px;
+    border-bottom-color: #2a2a2a;
     border-left-width: 3px;
     border-left-color: transparent;
     justify-content: center;
-    margin: 2px 0;
 }
 
 .track-header:hover {
-    background-color: #4a4a4a;
+    background-color: #484848;
 }
 
 .track-header__name {
-    color: #FFFFFF;
+    color: #E0E0E0;
     font-size: 12px;
     -unity-text-align: middle-left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .track-name {
-    color: #FFFFFF;
+    color: #E0E0E0;
     font-size: 12px;
     -unity-text-align: middle-left;
 }
@@ -141,22 +178,25 @@
 .track-row {
     height: var(--track-height);
     flex-direction: row;
-    margin: 2px 0;
     background-color: var(--track-bg);
+    border-bottom-width: 1px;
+    border-bottom-color: #2a2a2a;
     position: relative;
 }
 
-.track-row:nth-child(even) {
+/* Alternate row color applied via C# (TrackContentView adds .track-row-alt) */
+.track-row-alt {
     background-color: var(--track-bg-alt);
 }
 
 /********** Clips **********/
 .sequence-clip {
     position: absolute;
-    height: var(--track-height);
+    height: 100%;
     border-radius: var(--clip-border-radius);
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
 
 .sequence-clip:hover {
@@ -169,8 +209,9 @@
 }
 
 .sequence-clip__name {
-    color: #000000;
+    color: rgba(0, 0, 0, 0.8);
     font-size: 10px;
+    -unity-font-style: bold;
     -unity-text-align: middle-left;
     margin-left: 4px;
     white-space: nowrap;
@@ -187,8 +228,9 @@
 }
 
 .clip-label {
-    color: #000000;
+    color: rgba(0, 0, 0, 0.8);
     font-size: 10px;
+    -unity-font-style: bold;
     -unity-text-align: middle-left;
     margin-left: 4px;
     white-space: nowrap;
@@ -243,8 +285,9 @@
     height: var(--track-height);
     flex-direction: row;
     align-items: center;
-    margin: 2px 0;
     background-color: var(--track-bg);
+    border-bottom-width: 1px;
+    border-bottom-color: #2a2a2a;
     padding-left: 5px;
     padding-right: 5px;
     position: relative;

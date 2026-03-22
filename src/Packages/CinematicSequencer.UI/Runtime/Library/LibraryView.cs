@@ -80,6 +80,9 @@ namespace CinematicSequencer.UI
         {
             _root = root ?? throw new ArgumentNullException(nameof(root));
 
+            // Clear UXML preview content
+            _root.Clear();
+
             // タブバー構築
             _tabBar = new VisualElement();
             _tabBar.AddToClassList("library-tab-bar");

@@ -4,28 +4,114 @@
 
     <ui:VisualElement name="sequence-editor-root" class="sequence-editor-root">
 
-        <!-- Upper: Library + Scene view -->
-        <ui:VisualElement name="top-panel" class="top-panel">
-            <ui:VisualElement name="library-container" class="library-panel" />
-            <ui:VisualElement name="scene-view-container" class="scene-view-panel" />
+        <!-- Left sidebar: Library -->
+        <ui:VisualElement name="library-container" class="library-panel">
+            <!-- Preview content (replaced at runtime by LibraryView) -->
+            <ui:VisualElement class="library-tab-bar preview-content">
+                <ui:Button text="Seq" class="library-tab-button selected" />
+                <ui:Button text="Cam" class="library-tab-button" />
+                <ui:Button text="Light" class="library-tab-button" />
+                <ui:Button text="FX" class="library-tab-button" />
+            </ui:VisualElement>
+            <ui:VisualElement class="library-actions preview-content">
+                <ui:Button text="Create" class="library-create-button" />
+                <ui:Button text="↻" class="library-refresh-button" />
+            </ui:VisualElement>
+            <ui:VisualElement class="library-list-view preview-content" style="flex-grow: 1;">
+                <ui:VisualElement class="library-item sequence-item">
+                    <ui:Label text="Sample Sequence" class="library-item-label" />
+                </ui:VisualElement>
+                <ui:VisualElement class="library-item camera-item">
+                    <ui:Label text="Camera Pose Asset" class="library-item-label" />
+                </ui:VisualElement>
+                <ui:VisualElement class="library-item light-item">
+                    <ui:Label text="Light Pose Asset" class="library-item-label" />
+                </ui:VisualElement>
+                <ui:VisualElement class="library-item light-item">
+                    <ui:Label text="Light Properties Asset" class="library-item-label" />
+                </ui:VisualElement>
+            </ui:VisualElement>
         </ui:VisualElement>
 
-        <!-- Middle: Playback toolbar -->
-        <ui:VisualElement name="playback-toolbar-container" class="playback-toolbar-container" />
+        <!-- Right: Editor area -->
+        <ui:VisualElement name="editor-area" class="editor-area">
 
-        <!-- Lower: Time ruler + Tracks -->
-        <ui:VisualElement name="sequence-panel" class="sequence-panel">
-            <!-- Left: Track headers -->
-            <ui:ScrollView name="track-headers-scroll-view" class="track-headers-scroll-view">
-                <ui:VisualElement name="track-headers-container" class="track-headers-container" />
-            </ui:ScrollView>
-            <!-- Right: Timeline -->
-            <ui:VisualElement name="timeline-panel" class="timeline-panel">
-                <ui:VisualElement name="time-ruler" class="time-ruler" />
-                <ui:ScrollView name="tracks-scroll-view" class="tracks-scroll-view">
-                    <ui:VisualElement name="tracks-container" class="tracks-container" />
-                </ui:ScrollView>
+            <!-- Playback toolbar -->
+            <ui:VisualElement name="playback-toolbar-container" class="playback-toolbar-container">
+                <!-- Preview content (replaced at runtime by PlaybackToolbar) -->
+                <ui:VisualElement class="playback-toolbar preview-content">
+                    <ui:Button text="▶" class="playback-toolbar__button playback-toolbar__play" />
+                    <ui:Button text="⏸" class="playback-toolbar__button playback-toolbar__pause" />
+                    <ui:Button text="■" class="playback-toolbar__button playback-toolbar__stop" />
+                    <ui:Label text="00:00.000" class="playback-toolbar__time" />
+                </ui:VisualElement>
             </ui:VisualElement>
+
+            <!-- Timeline area -->
+            <ui:VisualElement name="sequence-panel" class="sequence-panel">
+
+                <!-- Left: Track headers -->
+                <ui:VisualElement name="track-headers-panel" class="track-headers-panel">
+                    <ui:VisualElement name="track-headers-corner" class="track-headers-corner">
+                        <ui:Label text="Tracks" class="track-headers-corner__label" />
+                    </ui:VisualElement>
+                    <ui:ScrollView name="track-headers-scroll-view" class="track-headers-scroll-view">
+                        <ui:VisualElement name="track-headers-container" class="track-headers-container">
+                            <!-- Preview content (cleared at runtime by SequenceEditorView) -->
+                            <ui:VisualElement class="track-header track-camera preview-content">
+                                <ui:Label text="Camera 1" class="track-header__name" />
+                            </ui:VisualElement>
+                            <ui:VisualElement class="track-header track-light preview-content">
+                                <ui:Label text="Light 1" class="track-header__name" />
+                            </ui:VisualElement>
+                            <ui:VisualElement class="track-header track-light preview-content">
+                                <ui:Label text="Light Props" class="track-header__name" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:ScrollView>
+                </ui:VisualElement>
+
+                <!-- Right: Timeline -->
+                <ui:VisualElement name="timeline-panel" class="timeline-panel">
+                    <ui:VisualElement name="time-ruler" class="time-ruler">
+                        <!-- Preview content (cleared at runtime by SequenceEditorView) -->
+                        <ui:Label text="0s" class="ruler-label preview-content" style="left: 0;" />
+                        <ui:VisualElement class="ruler-mark major preview-content" style="left: 0;" />
+                        <ui:Label text="1s" class="ruler-label preview-content" style="left: 100px;" />
+                        <ui:VisualElement class="ruler-mark major preview-content" style="left: 100px;" />
+                        <ui:Label text="2s" class="ruler-label preview-content" style="left: 200px;" />
+                        <ui:VisualElement class="ruler-mark major preview-content" style="left: 200px;" />
+                        <ui:Label text="3s" class="ruler-label preview-content" style="left: 300px;" />
+                        <ui:VisualElement class="ruler-mark major preview-content" style="left: 300px;" />
+                        <ui:Label text="4s" class="ruler-label preview-content" style="left: 400px;" />
+                        <ui:VisualElement class="ruler-mark major preview-content" style="left: 400px;" />
+                        <ui:Label text="5s" class="ruler-label preview-content" style="left: 500px;" />
+                        <ui:VisualElement class="ruler-mark major preview-content" style="left: 500px;" />
+                    </ui:VisualElement>
+                    <ui:ScrollView name="tracks-scroll-view" class="tracks-scroll-view">
+                        <ui:VisualElement name="tracks-container" class="tracks-container">
+                            <!-- Preview content (cleared at runtime by SequenceEditorView) -->
+                            <ui:VisualElement class="track-row preview-content">
+                                <ui:VisualElement class="sequence-clip clip-camera" style="left: 0; width: 500px;">
+                                    <ui:Label text="Camera Pose" class="sequence-clip__name" />
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="track-row preview-content">
+                                <ui:VisualElement class="sequence-clip clip-light" style="left: 200px; width: 500px;">
+                                    <ui:Label text="Light Pose" class="sequence-clip__name" />
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="track-row preview-content">
+                                <ui:VisualElement class="sequence-clip clip-light" style="left: 0; width: 1000px;">
+                                    <ui:Label text="Light Properties" class="sequence-clip__name" />
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:ScrollView>
+                </ui:VisualElement>
+
+            </ui:VisualElement>
+
         </ui:VisualElement>
 
         <!-- Dialog overlay -->
