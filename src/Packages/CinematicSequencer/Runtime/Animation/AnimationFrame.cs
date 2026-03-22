@@ -27,6 +27,25 @@ namespace CinematicSequencer.Animation
             }
         }
 
+        /// <summary>
+        /// v2 ClipAsset用コンストラクタ。DataType指定不要。
+        /// </summary>
+        public AnimationFrame(int propertyCount)
+        {
+            Type = DataType.Unknown;
+
+            if (propertyCount <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(propertyCount), "Property count must be greater than zero.");
+            }
+
+            _properties = new (string Name, float Value)[propertyCount];
+            for (int i = 0; i < propertyCount; i++)
+            {
+                _properties[i] = (string.Empty, 0f);
+            }
+        }
+
         public void SetTime(float time)
         {
             Time = time;

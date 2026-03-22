@@ -15,6 +15,8 @@ namespace CinematicSequencer.Animation
         public enum WrapMode
         {
             ClampForever,
+            Loop,
+            PingPong,
         }
 
         protected readonly List<Keyframe> _keys = new();
@@ -281,6 +283,42 @@ namespace CinematicSequencer.Animation
         public static float Linear(float s, float p0, float p1)
         {
             return p0 + s * (p1 - p0);
+        }
+
+        /// <summary>
+        /// Undo/Redo用のスナップショットを作成。
+        /// </summary>
+        public AnimationCurveSnapshot CreateSnapshot()
+        {
+            return new AnimationCurveSnapshot(_keys.ToArray(), PreWrapMode, PostWrapMode);
+        }
+
+        /// <summary>
+        /// スナップショットからカーブの状態を復元。
+        /// </summary>
+        public void RestoreSnapshot(AnimationCurveSnapshot snapshot)
+        {
+            _keys.Clear();
+            _keys.AddRange(snapshot.Keys);
+            PreWrapMode = snapshot.PreWrapMode;
+            PostWrapMode = snapshot.PostWrapMode;
+        }
+    }
+
+    /// <summary>
+    /// AnimationCurveの状態スナップショット。Undo/Redo用。
+    /// </summary>
+    public sealed class AnimationCurveSnapshot
+    {
+        public Keyframe[] Keys { get; }
+        public AnimationCurve.WrapMode PreWrapMode { get; }
+        public AnimationCurve.WrapMode PostWrapMode { get; }
+
+        public AnimationCurveSnapshot(Keyframe[] keys, AnimationCurve.WrapMode preWrapMode, AnimationCurve.WrapMode postWrapMode)
+        {
+            Keys = keys;
+            PreWrapMode = preWrapMode;
+            PostWrapMode = postWrapMode;
         }
     }
 }
