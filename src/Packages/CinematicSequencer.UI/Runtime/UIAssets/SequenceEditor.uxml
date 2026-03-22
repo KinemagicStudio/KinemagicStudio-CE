@@ -1,0 +1,35 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <Style src="Common.uss" />
+    <Style src="SequenceEditor.uss" />
+
+    <ui:VisualElement name="sequence-editor-root" class="sequence-editor-root">
+
+        <!-- Upper: Library + Scene view -->
+        <ui:VisualElement name="top-panel" class="top-panel">
+            <ui:VisualElement name="library-container" class="library-panel" />
+            <ui:VisualElement name="scene-view-container" class="scene-view-panel" />
+        </ui:VisualElement>
+
+        <!-- Middle: Playback toolbar -->
+        <ui:VisualElement name="playback-toolbar-container" class="playback-toolbar-container" />
+
+        <!-- Lower: Time ruler + Tracks -->
+        <ui:VisualElement name="sequence-panel" class="sequence-panel">
+            <!-- Left: Track headers -->
+            <ui:ScrollView name="track-headers-scroll-view" class="track-headers-scroll-view">
+                <ui:VisualElement name="track-headers-container" class="track-headers-container" />
+            </ui:ScrollView>
+            <!-- Right: Timeline -->
+            <ui:VisualElement name="timeline-panel" class="timeline-panel">
+                <ui:VisualElement name="time-ruler" class="time-ruler" />
+                <ui:ScrollView name="tracks-scroll-view" class="tracks-scroll-view">
+                    <ui:VisualElement name="tracks-container" class="tracks-container" />
+                </ui:ScrollView>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Dialog overlay -->
+        <ui:VisualElement name="dialog-layer" class="dialog-layer" />
+
+    </ui:VisualElement>
+</ui:UXML>

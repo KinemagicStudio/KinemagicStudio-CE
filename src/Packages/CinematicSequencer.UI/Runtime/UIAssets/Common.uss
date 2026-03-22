@@ -1,0 +1,393 @@
+/* ==========================================================================
+   CinematicSequencer v2 — Common Styles
+   CSS variables + shared component styles
+   ========================================================================== */
+
+/********** CSS Variables **********/
+:root {
+    /* Color theme */
+    --track-bg: #3a3a3a;
+    --track-bg-alt: #333333;
+    --panel-bg: #2d2d2d;
+    --header-bg: #383838;
+
+    /* Sizes */
+    --track-header-width: 200px;
+    --track-height: 40px;
+    --ruler-height: 30px;
+    --clip-border-radius: 3px;
+
+    /* Clip type colors */
+    --camera-clip-color: #4a90d9;
+    --light-clip-color: #e6a817;
+    --effect-clip-color: #7b68ee;
+    --audio-clip-color: #50c878;
+    --motion-clip-color: #e06c75;
+    --posteffect-clip-color: #c678dd;
+
+    /* Accent */
+    --playhead-color: #ff4444;
+    --snap-guide-color: #ffff00;
+    --selection-border-color: #ffffff;
+}
+
+/********** Selection **********/
+.selected {
+    border-width: 2px;
+    border-color: var(--selection-border-color);
+}
+
+/********** Section header / separator **********/
+.section-header {
+    font-size: 14px;
+    -unity-font-style: bold;
+    color: #E0E0E0;
+    margin-bottom: 10px;
+}
+
+.separator {
+    height: 1px;
+    background-color: #444444;
+    margin: 4px 0;
+}
+
+/********** Playback toolbar **********/
+.playback-toolbar {
+    flex-direction: row;
+    height: 36px;
+    padding: 0 8px;
+    align-items: center;
+    background-color: var(--header-bg);
+    border-bottom-width: 1px;
+    border-bottom-color: #222222;
+}
+
+.playback-toolbar__button {
+    margin: 0 2px;
+    padding: 4px 8px;
+    background-color: #4a4a4a;
+    border-width: 1px;
+    border-color: #555555;
+    border-radius: 3px;
+    color: #E0E0E0;
+    font-size: 12px;
+}
+
+.playback-toolbar__button:hover {
+    background-color: #555555;
+}
+
+.playback-toolbar__button:active {
+    background-color: #333333;
+}
+
+.playback-toolbar__play {
+    color: #50c878;
+}
+
+.playback-toolbar__pause {
+    color: #e6a817;
+}
+
+.playback-toolbar__stop {
+    color: #e06c75;
+}
+
+.playback-toolbar__time {
+    min-width: 80px;
+    padding: 4px 8px;
+    background-color: #222222;
+    border-radius: 3px;
+    -unity-text-align: middle-center;
+    color: #E0E0E0;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+/********** Dialog **********/
+.dialog-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-window {
+    width: 400px;
+    background-color: #333333;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #555555;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.dialog-title {
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    -unity-font-style: bold;
+}
+
+.dialog-message {
+    font-size: 14px;
+    color: #CCCCCC;
+    margin-bottom: 20px;
+    white-space: normal;
+}
+
+.dialog-buttons {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.dialog-button {
+    margin-left: 10px;
+    padding: 5px 15px;
+    background-color: #444444;
+    border-width: 1px;
+    border-color: #666666;
+    border-radius: 3px;
+    color: #FFFFFF;
+}
+
+.dialog-button:hover {
+    background-color: #555555;
+}
+
+/********** Library **********/
+.library-tab-bar {
+    flex-direction: row;
+    background-color: var(--panel-bg);
+    border-bottom-width: 2px;
+    border-bottom-color: #222222;
+    margin-bottom: 5px;
+}
+
+.library-tab-button {
+    flex-grow: 1;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    border-bottom-width: 2px;
+    border-bottom-color: transparent;
+    border-radius: 0;
+    color: #AAAAAA;
+    font-size: 12px;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.library-tab-button:hover {
+    color: #FFFFFF;
+}
+
+.library-tab-button.selected {
+    color: #FFFFFF;
+    border-bottom-color: #3a9bdc;
+    background-color: rgba(58, 155, 220, 0.1);
+}
+
+.library-actions {
+    padding: 5px;
+    border-bottom-width: 1px;
+    border-bottom-color: #444444;
+    background-color: #333333;
+    flex-direction: row;
+}
+
+.library-create-button {
+    margin: 2px 0;
+    padding: 4px 8px;
+    background-color: #2C5866;
+    color: #FFFFFF;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: #3C7886;
+    font-size: 12px;
+    flex-grow: 1;
+    margin-right: 4px;
+}
+
+.library-create-button:hover {
+    background-color: #3C7886;
+}
+
+.library-create-button:active {
+    background-color: #204856;
+}
+
+.library-refresh-button {
+    margin: 2px 0;
+    padding: 4px 8px;
+    background-color: #5A6650;
+    color: #FFFFFF;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: #7A8670;
+    font-size: 14px;
+}
+
+.library-refresh-button:hover {
+    background-color: #7A8670;
+}
+
+.library-refresh-button:active {
+    background-color: #4A5640;
+}
+
+.library-list-view {
+    flex-grow: 1;
+}
+
+.library-item {
+    padding: 4px 8px;
+    margin: 2px 0;
+    background-color: #444444;
+    border-radius: 2px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.library-item:hover {
+    background-color: #555555;
+}
+
+.library-item-label {
+    color: #E0E0E0;
+    font-size: 12px;
+    -unity-text-align: middle-left;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Library item type colors — left border indicator */
+.camera-item {
+    border-left-width: 3px;
+    border-left-color: var(--camera-clip-color);
+}
+
+.light-item {
+    border-left-width: 3px;
+    border-left-color: var(--light-clip-color);
+}
+
+.effect-item {
+    border-left-width: 3px;
+    border-left-color: var(--effect-clip-color);
+}
+
+.audio-item {
+    border-left-width: 3px;
+    border-left-color: var(--audio-clip-color);
+}
+
+.motion-item {
+    border-left-width: 3px;
+    border-left-color: var(--motion-clip-color);
+}
+
+.posteffect-item {
+    border-left-width: 3px;
+    border-left-color: var(--posteffect-clip-color);
+}
+
+.sequence-item {
+    border-left-width: 3px;
+    border-left-color: #AAAAAA;
+}
+
+/********** Property editor **********/
+.property-editor-panel {
+    padding: 8px;
+    background-color: var(--panel-bg);
+}
+
+.property-group-header {
+    font-size: 13px;
+    -unity-font-style: bold;
+    color: #E0E0E0;
+    padding: 4px 0;
+    margin-top: 8px;
+    border-bottom-width: 1px;
+    border-bottom-color: #444444;
+}
+
+.property-row {
+    flex-direction: row;
+    align-items: center;
+    height: 24px;
+    margin: 2px 0;
+}
+
+.property-label {
+    width: 120px;
+    color: #AAAAAA;
+    font-size: 12px;
+    -unity-text-align: middle-left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.property-slider {
+    flex-grow: 1;
+    margin: 0 4px;
+}
+
+.property-float-field {
+    width: 60px;
+    font-size: 12px;
+}
+
+/********** Time ruler (shared) **********/
+.ruler-mark {
+    position: absolute;
+    width: 1px;
+    height: 10px;
+    background-color: #888888;
+}
+
+.ruler-mark.major {
+    height: 16px;
+    background-color: #AAAAAA;
+}
+
+.ruler-label {
+    position: absolute;
+    color: #AAAAAA;
+    font-size: 10px;
+    -unity-text-align: upper-center;
+    margin-top: 18px;
+}
+
+/********** Playhead / cursor (shared) **********/
+.timeline-cursor {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: var(--playhead-color);
+    top: 0;
+    z-index: 100;
+}
+
+.timeline-cursor-head {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--playhead-color);
+    border-radius: 6px;
+    top: -6px;
+    left: -5px;
+    z-index: 101;
+}
+
+.timeline-cursor-line {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: var(--playhead-color);
+    top: 0;
+}

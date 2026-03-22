@@ -1,0 +1,274 @@
+/* ==========================================================================
+   CinematicSequencer v2 — SequenceEditor Styles
+   Layout, track headers, track content, clips, keyframes
+   ========================================================================== */
+
+/********** Layout **********/
+.sequence-editor-root {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: var(--panel-bg);
+}
+
+.top-panel {
+    flex-direction: row;
+    height: 250px;
+    border-bottom-width: 1px;
+    border-bottom-color: #222222;
+}
+
+.library-panel {
+    width: 250px;
+    border-right-width: 1px;
+    border-right-color: #222222;
+    background-color: #333333;
+}
+
+.scene-view-panel {
+    flex-grow: 1;
+    background-color: #1a1a1a;
+}
+
+.playback-toolbar-container {
+    border-bottom-width: 1px;
+    border-bottom-color: #222222;
+}
+
+.sequence-panel {
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+.track-headers-scroll-view {
+    width: var(--track-header-width);
+    border-right-width: 1px;
+    border-right-color: #222222;
+    background-color: #333333;
+}
+
+.track-headers-container {
+    flex-grow: 1;
+}
+
+.timeline-panel {
+    flex-grow: 1;
+    flex-direction: column;
+    background-color: var(--panel-bg);
+}
+
+.time-ruler {
+    height: var(--ruler-height);
+    background-color: var(--header-bg);
+    border-bottom-width: 1px;
+    border-bottom-color: #222222;
+}
+
+.tracks-scroll-view {
+    flex-grow: 1;
+}
+
+.tracks-container {
+    flex-grow: 1;
+}
+
+.dialog-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/********** Track headers **********/
+.track-header {
+    height: var(--track-height);
+    padding: 0 8px;
+    background-color: #444444;
+    border-right-width: 1px;
+    border-right-color: #222222;
+    border-left-width: 3px;
+    border-left-color: transparent;
+    justify-content: center;
+    margin: 2px 0;
+}
+
+.track-header:hover {
+    background-color: #4a4a4a;
+}
+
+.track-header__name {
+    color: #FFFFFF;
+    font-size: 12px;
+    -unity-text-align: middle-left;
+}
+
+.track-name {
+    color: #FFFFFF;
+    font-size: 12px;
+    -unity-text-align: middle-left;
+}
+
+/* Track type left border colors */
+.track-camera {
+    border-left-color: var(--camera-clip-color);
+}
+
+.track-light {
+    border-left-color: var(--light-clip-color);
+}
+
+.track-effect {
+    border-left-color: var(--effect-clip-color);
+}
+
+.track-audio {
+    border-left-color: var(--audio-clip-color);
+}
+
+.track-motion {
+    border-left-color: var(--motion-clip-color);
+}
+
+.track-posteffect {
+    border-left-color: var(--posteffect-clip-color);
+}
+
+.track-default {
+    border-left-color: #888888;
+}
+
+/********** Track content rows **********/
+.track-row {
+    height: var(--track-height);
+    flex-direction: row;
+    margin: 2px 0;
+    background-color: var(--track-bg);
+    position: relative;
+}
+
+.track-row:nth-child(even) {
+    background-color: var(--track-bg-alt);
+}
+
+/********** Clips **********/
+.sequence-clip {
+    position: absolute;
+    height: var(--track-height);
+    border-radius: var(--clip-border-radius);
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.sequence-clip:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.sequence-clip.selected {
+    border-width: 2px;
+    border-color: var(--selection-border-color);
+}
+
+.sequence-clip__name {
+    color: #000000;
+    font-size: 10px;
+    -unity-text-align: middle-left;
+    margin-left: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.timeline-clip {
+    position: absolute;
+    height: var(--track-height);
+    border-radius: var(--clip-border-radius);
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.clip-label {
+    color: #000000;
+    font-size: 10px;
+    -unity-text-align: middle-left;
+    margin-left: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Clip type background colors */
+.clip-camera {
+    background-color: var(--camera-clip-color);
+}
+
+.clip-light {
+    background-color: var(--light-clip-color);
+}
+
+.clip-effect {
+    background-color: var(--effect-clip-color);
+}
+
+.clip-audio {
+    background-color: var(--audio-clip-color);
+}
+
+.clip-motion {
+    background-color: var(--motion-clip-color);
+}
+
+.clip-posteffect {
+    background-color: var(--posteffect-clip-color);
+}
+
+.clip-default {
+    background-color: #888888;
+}
+
+/* Legacy clip type classes (v1 compatibility) */
+.camera-clip {
+    background-color: var(--camera-clip-color);
+}
+
+.light-clip {
+    background-color: var(--light-clip-color);
+}
+
+.audio-clip {
+    background-color: var(--audio-clip-color);
+}
+
+/********** Keyframe track **********/
+.keyframe-track-row {
+    height: var(--track-height);
+    flex-direction: row;
+    align-items: center;
+    margin: 2px 0;
+    background-color: var(--track-bg);
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+}
+
+.keyframe-marker {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(255, 255, 0);
+    border-radius: 0;
+    transform-origin: center;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    rotate: 45deg;
+}
+
+.keyframe-marker:hover {
+    background-color: rgb(255, 255, 150);
+    border-color: rgb(255, 255, 255);
+}
+
+.keyframe-marker.selected {
+    background-color: rgb(255, 165, 0);
+    border-color: rgb(255, 255, 255);
+    border-width: 2px;
+}
